@@ -205,7 +205,6 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 1. Open **_Layout.cshtml**, located in the Views | Shared folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
 
 	````HTML
-	CSHTML
 	...
 	 <meta charset="utf-8" />
 	 <title>@ViewBag.Title</title> 
@@ -222,7 +221,6 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 1. Uncomment the viewport tag.
 
 	````HTML
-	CSHTML
 	...
 	 <meta charset="utf-8" />
 	 <title>@ViewBag.Title</title> 
@@ -315,7 +313,6 @@ In this task, you will create a mock of the photo service to retrieve the conten
 	(Code Snippet - _MVC4 Lab - Ex02 - PhotoController_)
 
 	````C#
-	C#
 	public class PhotoController : Controller
 	{
 	   public ActionResult Gallery()
@@ -344,7 +341,6 @@ In this task, you will update the Home page to show the photo gallery by using t
 	(Code Snippet - _MVC4 Lab - Ex02 - Photo model_)
 
 	````C#
-	C#
 	public class Photo
 	{
 	    public string Title { get; set; }
@@ -374,7 +370,6 @@ In this task, you will update the Home page to show the photo gallery by using t
 	(Code Snippet - _MVC4 Lab - Ex02 - Index Action_)
 
 	````C#
-	C#
 	public ActionResult Index()
 	{
 	    var client = new HttpClient();
@@ -394,7 +389,6 @@ In this task, you will update the Home page to show the photo gallery by using t
 	(Code Snippet - _MVC4 Lab - Ex02 - Photo List_)
 
 	````HTML
-	HTML
 	@model List<PhotoGallery.Models.Photo>
 	@{
 	    ViewBag.Title = "Photo Gallery";
@@ -537,7 +531,6 @@ In this task, you will install and use a recipe to generate mobile versions of e
 1. Open the new generated **Index.mobile.cshtml** view and replace the existing \<ul> tag with this code. By doing this, you will be updating the \<ul> tag with jQuery Mobile data annotations to use the mobile themes from jQuery. 
 
 	````HTML
-	HTML
 	<ul data-role="listview" data-inset="true" data-filter="true">
 	````
 
@@ -568,7 +561,6 @@ In this task, you will install and use a recipe to generate mobile versions of e
 1. Fix the positioning of the photo title to make it show at the right side of the image. To do this, add the following code to the **Site.Mobile.css** file.
 
 	````CSS
-	CSS
 	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
 	    padding: 0px;
 	}
@@ -607,7 +599,6 @@ In this task, you will update the mobile layout to use a different theme than th
 1. Find the div element with the data-role set to "page" and update the **data-theme** to "**e**".
 
 	````XML
-	XML
 	<div data-role="page" data-theme="e">
 	````
 
@@ -677,7 +668,6 @@ In this task, you will update the desktop layout to include the view-switcher. T
 1. Find the login section and insert a call to render the **_ViewSwitcher** partial view below the **_LogOnPartial** partial view. Then, press **CTRL + S** to save the changes.
 
 	````HTML
-	HTML
 	<div class="float-right">
 	    <section id="login">
 	        @Html.Partial("_LogOnPartial")
@@ -722,7 +712,6 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 1. Open **Global.asax.cs** and add the following using statement.
 
 	````C#
-	C#
 	using System.Web.WebPages;
 	````
 
@@ -731,7 +720,6 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 	(Code Snippet - _MVC4 Lab - Ex03 - iPhone DisplayMode_)
 
 	````C#
-	C#
 	protected void Application_Start()
 	{
 	    AreaRegistration.RegisterAllAreas();
@@ -761,7 +749,6 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 1. Find the div element with the data-role attribute set to **page** and change the **data-theme** attribute to "**a**".
 
 	````XML
-	XML
 	<body> 
 	    <div data-role="page" data-theme="a">
 	        @Html.Partial("_ViewSwitcher")
@@ -807,21 +794,18 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 1. Add the following using statement.
 
 	````C#
-	C#
 	using System.Threading.Tasks;
 	````
 
 1. Update the **HomeController** class to inherit from **AsyncController**. Controllers that derive from AsyncController enable ASP.NET to process asynchronous requests, and they can still service synchronous action methods.
 
 	````C#
-	C#
 	public class HomeController : AsyncController
 	{	````
 
 1. Add the **async** keyword to the **Index** method and make it return the type **Task<ActionResult>**.
 
 	````C#
-	C#
 	public async Task<ActionResult> Index()
 	{
 	    ...
@@ -850,7 +834,6 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 	(Code Snippet - _MVC4 Lab - Ex04 - ReadAsStringAsync_)
 
 	````C#
-	C#
 	//var jss = new JavaScriptSerializer();
 	//var result = jss.Deserialize<List<Photo>>(response.Content.ReadAsString());
 	
@@ -875,14 +858,12 @@ Asynchronous action methods that return Task instances can also support time-out
 1. Add the following using statement to the **HomeController.cs** file.
 
 	````C#
-	C#
 	using System.Threading;
 	````
 
 1. Update the Index action to receive a **CancellationToken** argument.
 
 	````C#
-	C#
 	public async Task<ActionResult> Index(**CancellationToken cancellationToken**)
 	{
 	    ...
@@ -893,7 +874,6 @@ Asynchronous action methods that return Task instances can also support time-out
 	(Code Snippet - _MVC4 Lab - Ex04 - SendAsync with CancellationToken_)
 
 	````C#
-	C#
 	public async Task<ActionResult> Index(CancellationToken cancellationToken)
 	{
 	    var client = new HttpClient();
@@ -912,7 +892,6 @@ Asynchronous action methods that return Task instances can also support time-out
 	(Code Snippet - _MVC4 Lab - Ex04 - Attributes_)
 
 	````C#
-	C#
 	[AsyncTimeout(500)]
 	[HandleError(ExceptionType = typeof(TaskCanceledException), View = "TimedOut")]
 	public async Task<ActionResult> Index(CancellationToken cancellationToken)
@@ -922,7 +901,6 @@ Asynchronous action methods that return Task instances can also support time-out
 1. Open the **PhotoController** class and update the **Gallery** method to delay the execution 1000 miliseconds (1 second) to simulate a long running task.
 
 	````C#
-	C#
 	public ActionResult Gallery()
 	{
 	    System.Threading.Thread.Sleep(1000);
@@ -934,7 +912,6 @@ Asynchronous action methods that return Task instances can also support time-out
 1. Open the **Web.config** file and enable custom errors by editing the following property.
 
 	````XML
-	XML
 	<system.web>
 	  <customErrors mode="On"></customErrors>
 	  ...
@@ -949,7 +926,6 @@ Asynchronous action methods that return Task instances can also support time-out
 1. Update the **TimedOut** view content as shown below.
 
 	````HTML
-	HTML
 	@{
 	    ViewBag.Title = "TimedOut";
 	    Layout = "~/Views/Shared/_Layout.cshtml";
