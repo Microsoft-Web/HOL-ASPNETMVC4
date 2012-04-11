@@ -4,7 +4,7 @@
 
 ### Introduction ###
 
-This Hands-On Lab is a step-by-step guides that are designed to help you learn ASP.NET MVC 4. It provides instructions to guide you through the process of developing a complete application using ASP.NET MVC 4.
+This Hands-On Lab is a step-by-step guide that is designed to help you learn ASP.NET MVC 4. It provides instructions to guide you through the process of developing a complete application using ASP.NET MVC 4.
 
 ### Repository Structure ###
 
