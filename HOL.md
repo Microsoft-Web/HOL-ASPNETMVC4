@@ -315,7 +315,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 	(Code Snippet - _MVC4 Lab - Ex02 - PhotoController_)
 
 	````C#
-	C#
+	//C#
 	public class PhotoController : Controller
 	{
 	   public ActionResult Gallery()
