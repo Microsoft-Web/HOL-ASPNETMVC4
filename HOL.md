@@ -96,7 +96,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 1. Press **F5** to run the solution and see the renewed templates. You can check out the following features:
 
-	- **Modern-style templates**
+ - **Modern-style templates**
 
 		The templates have been renewed, providing more modern-looking styles.
 
