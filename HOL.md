@@ -27,7 +27,7 @@ In this hands-on lab, you will learn how to:
  
 ### Prerequisites ###
 
-- [Microsoft Visual Studio 11 Ultimate Beta](http://go.microsoft.com/fwlink/?LinkId=240160)
+- [Microsoft Visual Studio 11 Beta](http://go.microsoft.com/fwlink/?LinkId=240160)
 
 - ASP.NET MVC 4 (included in the Microsoft Visual Studio 11 Beta installation)
 
