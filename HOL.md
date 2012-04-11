@@ -136,29 +136,29 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
  
 	_The MVC4 Internet Application Project Template_
 
-	- **HTML 5 Markup**
+  - **HTML 5 Markup**
 
-		Browse template views to find out the new theme markup.
+	Browse template views to find out the new theme markup.
 
- 		![New template, using Razor and HTML5 markup About.cshtml.](./images/New-template,-using-Razor-and-HTML5-markup-About.cshtml..png?raw=true "New template, using Razor and HTML5 markup About.cshtml.")
+	![New template, using Razor and HTML5 markup About.cshtml.](./images/New-template,-using-Razor-and-HTML5-markup-About.cshtml..png?raw=true "New template, using Razor and HTML5 markup About.cshtml.")
  
-		_New template, using Razor and HTML5 markup (About.cshtml)._
+	_New template, using Razor and HTML5 markup (About.cshtml)._
 
-	- **Updated JavaScript libraries**
+  - **Updated JavaScript libraries**
 
-		The MVC4 default template now includes KnockoutJS, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
+	The MVC4 default template now includes KnockoutJS, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
-		> **Note:** You can get more information about KnockOutJS library in this link: [http://learn.knockoutjs.com/](http://learn.knockoutjs.com/).Additionally, you can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).
+	> **Note:** You can get more information about KnockOutJS library in this link: [http://learn.knockoutjs.com/](http://learn.knockoutjs.com/).Additionally, you can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).
 
-	- **ASP.NET Universal providers included in the solution**
+  - **ASP.NET Universal providers included in the solution**
 
-		ASP.NET Universal Providers extend Session, Membership, Roles and Profile support to SQL Compact Edition and SQL Azure. By only configuring the right connection string, your application will be able to work with SQL Server (plus Express), SQL Server Compact or SQL Azure.
+	ASP.NET Universal Providers extend Session, Membership, Roles and Profile support to SQL Compact Edition and SQL Azure. By only configuring the right connection string, your application will be able to work with SQL Server (plus Express), SQL Server Compact or SQL Azure.
 
-		> **Note:** ASP.NET Universal Providers Library is also available for MVC3 projects in the NuGet public feed. You can learn more about SQL Azure in this link: [http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_sqlazure_unit](http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_sqlazure_unit).
+	> **Note:** ASP.NET Universal Providers Library is also available for MVC3 projects in the NuGet public feed. You can learn more about SQL Azure in this link: [http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_sqlazure_unit](http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_sqlazure_unit).
 
-		![ASP.NET-Universal-Providers-reference-is-now-included](images/ASP.NET-Universal-Providers-reference-is-now-included.png?raw=true)
+	![ASP.NET-Universal-Providers-reference-is-now-included](images/ASP.NET-Universal-Providers-reference-is-now-included.png?raw=true)
 
-		_ASP.NET Universal Providers reference is now included_
+	_ASP.NET Universal Providers reference is now included_
  
 #### Task 2 - Exploring the Mobile Application Template ####
 
