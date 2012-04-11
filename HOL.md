@@ -108,25 +108,25 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
  
   _New Contact page_
 
-	- **Richer UI with JavaScript**
+  - **Richer UI with JavaScript**
 
-		Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
+  Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
 
- 		![Log On dialog](./images/Log-On-dialog.png?raw=true "Log On dialog")
+  ![Log On dialog](./images/Log-On-dialog.png?raw=true "Log On dialog")
  
-		_Log On dialog_
+  _Log On dialog_
 
- 		![Registration dialog](./images/Registration-dialog.png?raw=true "Registration dialog")
+  ![Registration dialog](./images/Registration-dialog.png?raw=true "Registration dialog")
  
-		_Registration dialog_
+  _Registration dialog_
 
-	- **Adaptive Rendering**
+  - **Adaptive Rendering**
 
-		Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
+  Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
 
- 		![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
+  ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
  
-	_MVC 4 project template in different browser sizes_
+  _MVC 4 project template in different browser sizes_
 
 1. Close the browser to stop the debugger and return to Visual Studio.
 
