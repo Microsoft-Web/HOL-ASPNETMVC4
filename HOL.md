@@ -174,19 +174,20 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 1. Now you are able to explore the solution and check out some of the new features introduced by the MVC 4 solution template for mobile:
 
-	- **jQuery Mobile Library** 
+  - **jQuery Mobile Library** 
 
-		The Mobile Application project template includes the jQuery Mobile library, which is an open source library for mobile browser compatibility. jQuery Mobile applies progressive enhancement to mobile browsers that support CSS and JavaScript. Progressive enhancement enables all browsers to display the basic content of a web page, while it only enables the most powerful browsers to display the rich content. The JavaScript and CSS files, included in the jQuery Mobile style, help mobile browsers to fit the content in the screen without making any change in the page markup.
+	The Mobile Application project template includes the jQuery Mobile library, which is an open source library for mobile browser compatibility. jQuery Mobile applies progressive enhancement to mobile browsers that support CSS and JavaScript. Progressive enhancement enables all browsers to display the basic content of a web page, while it only enables the most powerful browsers to display the rich content. The JavaScript and CSS files, included in the jQuery Mobile style, help mobile browsers to fit the content in the screen without making any change in the page markup.
 
-		![jQuery-mobile-library-included-in-the-template](images/jQuery-mobile-library-included-in-the-template.png?raw=true)
+	![jQuery-mobile-library-included-in-the-template](images/jQuery-mobile-library-included-in-the-template.png?raw=true)
 
-		_jQuery mobile library included in the template_
+	_jQuery mobile library included in the template_
 
-	- **HTML5 based markup**
+  - **HTML5 based markup**
 
-		![Mobile-application-template-using-HTML5-markup](images/Mobile-application-template-using-HTML5-markup.png?raw=true)
+	![Mobile-application-template-using-HTML5-markup](images/Mobile-application-template-using-HTML5-markup.png?raw=true)
 
-		_Mobile application template using HTML5 markup, (LogOn.cshtml and index.cshtml)_
+	_Mobile application template using HTML5 markup, (LogOn.cshtml and index.cshtml)_
+
 1. Press **F5** to run the solution.
 
 1. Open the **Windows Phone 7 Emulator,** located in **Start Menu | All Programs | Windows Phone SDK 7.1 | Windows Phone Emulator.** 
@@ -466,7 +467,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 	This command installs jQuery Mobile and some helper files, including the following:
 
-	- **Views/Shared/_Layout.Mobile.cshtml**: is a jQuery Mobile-based layout optimized for a smaller screen. When the website receives a request from a mobile browser, it will replace the original layout (_Layout.cshtml) with this one.
+  - **Views/Shared/_Layout.Mobile.cshtml**: is a jQuery Mobile-based layout optimized for a smaller screen. When the website receives a request from a mobile browser, it will replace the original layout (_Layout.cshtml) with this one.
 
 	- A view-switcher component: consists of the **Views/Shared/_ViewSwitcher.cshtml** partial view and the **ViewSwitcherController.cs** controller. This component will show a link on mobile browsers to enable users to switch to the desktop version of the page.
 
@@ -651,11 +652,11 @@ In this task, you will explore the sample implementation of a view-switcher adde
 
 1. Open the **ViewSwitcherController.cs** class located in the **Controllers** folder. Check out that SwitchView action is called by the link in the ViewSwitcher component, and notice the new HttpContext methods.
 
-	- The **HttpContext.ClearOverridenBrowser()** method removes any overridden user agent for the current request.
+  - The **HttpContext.ClearOverridenBrowser()** method removes any overridden user agent for the current request.
 
-	- The **HttpContext.SetOverridenBrowser()** method overrides the request's actual user agent value using the specified user agent.
+  - The **HttpContext.SetOverridenBrowser()** method overrides the request's actual user agent value using the specified user agent.
 
- 	![ViewSwitcher Controller](./images/ViewSwitcher-Controller.png?raw=true "ViewSwitcher Controller")
+	![ViewSwitcher Controller](./images/ViewSwitcher-Controller.png?raw=true "ViewSwitcher Controller")
  
 	_ViewSwitcher Controller_
 
