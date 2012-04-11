@@ -731,6 +731,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 	(Code Snippet - _MVC4 Lab - Ex03 - iPhone DisplayMode_)
 
 	````C#
+	C#
 	protected void Application_Start()
 	{
 	    AreaRegistration.RegisterAllAreas();
