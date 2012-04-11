@@ -204,7 +204,7 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 1. Open **_Layout.cshtml**, located in the Views | Shared folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
 
-	````CSHTML
+	````HTML
 	CSHTML
 	...
 	 <meta charset="utf-8" />
@@ -221,7 +221,7 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 1. Uncomment the viewport tag.
 
-	````CSHTML
+	````HTML
 	CSHTML
 	...
 	 <meta charset="utf-8" />
