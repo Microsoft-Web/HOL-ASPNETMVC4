@@ -98,15 +98,15 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
  - **Modern-style templates**
 
-		The templates have been renewed, providing more modern-looking styles.
+    The templates have been renewed, providing more modern-looking styles.
 
- 		![MVC4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
+    ![MVC4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
  
-		_MVC4 restyled templates_
+    _MVC4 restyled templates_
 
- 		![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
+    ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
  
-		_New Contact page_
+    _New Contact page_
 
 	- **Richer UI with JavaScript**
 
