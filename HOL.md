@@ -455,7 +455,6 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 	>**Note:** By running the following command, you will be downloading the jQuery.Mobile.MVC library from Nuget.
 
 	````PM
-	PM
 	Install-Package jQuery.Mobile.MVC
 	````
 
@@ -505,7 +504,6 @@ In this task, you will install and use a recipe to generate mobile versions of e
 1. In the **Package Manager Console** run the following command to install the **MvcHaack.ViewMobilizer** package.
 
 	````PM
-	pm
 	Install-Package MvcHaack.ViewMobilizer
 	````
 	>**Note:** In this lab you will use a sample code recipe available from NuGet. If you want to learn how to create a code recipe, read the following article: [http://haacked.com/archive/2011/09/22/writing-a-recipe-for-asp-net-mvc-4-developer-preview.aspx](http://haacked.com/archive/2011/09/22/writing-a-recipe-for-asp-net-mvc-4-developer-preview.aspx)
