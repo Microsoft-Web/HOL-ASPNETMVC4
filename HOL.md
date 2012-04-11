@@ -315,7 +315,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 	(Code Snippet - _MVC4 Lab - Ex02 - PhotoController_)
 
 	````C#
-	//C#
+	C#
 	public class PhotoController : Controller
 	{
 	   public ActionResult Gallery()
@@ -731,7 +731,6 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 	(Code Snippet - _MVC4 Lab - Ex03 - iPhone DisplayMode_)
 
 	````C#
-	C#
 	protected void Application_Start()
 	{
 	    AreaRegistration.RegisterAllAreas();
