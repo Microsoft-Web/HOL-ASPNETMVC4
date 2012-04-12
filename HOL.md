@@ -163,21 +163,19 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
  
 	_Creating a new MVC4 Mobile Application_
 
-1. Now you are able to explore the solution and check out some of the new features introduced by the MVC 4 solution template for mobile:
+1. Now you are able to explore the solution and check out some of the new features introduced by the MVC 4 solution template for mobile:  
+  - **jQuery Mobile Library**
 
-  - **jQuery Mobile Library** 
+	    The Mobile Application project template includes the jQuery Mobile library, which is an open source library for mobile browser compatibility. jQuery Mobile applies progressive enhancement to mobile browsers that support CSS and JavaScript. Progressive enhancement enables all browsers to display the basic content of a web page, while it only enables the most powerful browsers to display the rich content. The JavaScript and CSS files, included in the jQuery Mobile style, help mobile browsers to fit the content in the screen without making any change in the page markup.
 
-	The Mobile Application project template includes the jQuery Mobile library, which is an open source library for mobile browser compatibility. jQuery Mobile applies progressive enhancement to mobile browsers that support CSS and JavaScript. Progressive enhancement enables all browsers to display the basic content of a web page, while it only enables the most powerful browsers to display the rich content. The JavaScript and CSS files, included in the jQuery Mobile style, help mobile browsers to fit the content in the screen without making any change in the page markup.
+	    ![jQuery-mobile-library-included-in-the-template](images/jQuery-mobile-library-included-in-the-template.png?raw=true)
 
-	![jQuery-mobile-library-included-in-the-template](images/jQuery-mobile-library-included-in-the-template.png?raw=true)
+	    _jQuery mobile library included in the template_  
+    - **HTML5 based markup**
 
-	_jQuery mobile library included in the template_
+	    ![Mobile-application-template-using-HTML5-markup](images/Mobile-application-template-using-HTML5-markup.png?raw=true)
 
-  - **HTML5 based markup**
-
-	![Mobile-application-template-using-HTML5-markup](images/Mobile-application-template-using-HTML5-markup.png?raw=true)
-
-	_Mobile application template using HTML5 markup, (LogOn.cshtml and index.cshtml)_
+	    _Mobile application template using HTML5 markup, (LogOn.cshtml and index.cshtml)_
 
 1. Press **F5** to run the solution.
 
