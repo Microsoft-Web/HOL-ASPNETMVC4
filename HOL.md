@@ -50,7 +50,7 @@ To install the code snippets:
 1. Double-click the **Setup.cmd** file in this folder to install the Visual Studio code snippets.
 
  
-If you are not familiar with the Visual Studio Code Snippets, and want to learn how to use them, you can refer to the appendix from this document "Appendix: Using Code Snippets".
+If you are not familiar with the Visual Studio Code Snippets, and want to learn how to use them, you can refer to the appendix from this document "[Appendix: Using Code Snippets](#Appendix)".
 
 ## Exercises ##
 
@@ -938,7 +938,8 @@ Asynchronous action methods that return Task instances can also support time-out
  	![Time-out exception handled](./images/Time-out-exception-handled.png?raw=true "Time-out exception handled")
  
  	_Time-out exception handled_
- 
+
+<a name="Appendix" />
 ## Appendix: Using Code Snippets ##
 
 With code snippets, you have all the code you need at your fingertips. The lab document will tell you exactly when you can use them, as shown in the following figure.
