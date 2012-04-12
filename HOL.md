@@ -442,7 +442,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 	> For more information see the following article: [http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
 
-1. Open the **Package Manager Console** by clicking the **Tools** > Library Package Manager > Package Manager Console** menu option.
+1. Open the **Package Manager Console** by clicking the **Tools** > **Library Package Manager** > **Package Manager Console** menu option.
 
  	![Opening the NuGet Package Manager Console](./images/Opening-the-NuGet-Package-Manager-Console.png?raw=true "Opening the NuGet Package Manager Console")
  
@@ -799,7 +799,8 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 	````C#
 	public class HomeController : AsyncController
-	{	````
+	{
+	````
 
 1. Add the **async** keyword to the **Index** method and make it return the type **Task<ActionResult>**.
 
@@ -862,7 +863,7 @@ Asynchronous action methods that return Task instances can also support time-out
 1. Update the Index action to receive a **CancellationToken** argument.
 
 	````C#
-	public async Task<ActionResult> Index(**CancellationToken cancellationToken**)
+	public async Task<ActionResult> Index(CancellationToken cancellationToken)
 	{
 	    ...
 	````
