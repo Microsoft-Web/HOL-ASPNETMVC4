@@ -95,7 +95,6 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 	> **Note:** Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C# / VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
 
 1. Press **F5** to run the solution and see the renewed templates. You can check out the following features:
-
   - **Modern-style templates**
 
 	  The templates have been renewed, providing more modern-looking styles.
@@ -127,6 +126,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 	  ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
  
 	  _MVC 4 project template in different browser sizes_
+
 1. Close the browser to stop the debugger and return to Visual Studio.
 1. Now you are able to explore the solution and check out some of the new features introduced by ASP.NET MVC 4 in the project template.
 
