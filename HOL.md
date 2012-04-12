@@ -447,13 +447,12 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 	Install-Package jQuery.Mobile.MVC
 	````
 
-	This command installs jQuery Mobile and some helper files, including the following:
+	This command installs jQuery Mobile and some helper files, including the following:  
+    - **Views/Shared/_Layout.Mobile.cshtml**: is a jQuery Mobile-based layout optimized for a smaller screen. When the website receives a request from a mobile browser, it will replace the original layout (_Layout.cshtml) with this one.
 
-  - **Views/Shared/_Layout.Mobile.cshtml**: is a jQuery Mobile-based layout optimized for a smaller screen. When the website receives a request from a mobile browser, it will replace the original layout (_Layout.cshtml) with this one.
+    - A view-switcher component: consists of the **Views/Shared/_ViewSwitcher.cshtml** partial view and the **ViewSwitcherController.cs** controller. This component will show a link on mobile browsers to enable users to switch to the desktop version of the page.
 
-	- A view-switcher component: consists of the **Views/Shared/_ViewSwitcher.cshtml** partial view and the **ViewSwitcherController.cs** controller. This component will show a link on mobile browsers to enable users to switch to the desktop version of the page.
-
- 	![Photo Gallery project with mobile support](./images/Photo-Gallery-project-with-mobile-support.png?raw=true "Photo Gallery project with mobile support")
+	![Photo Gallery project with mobile support](./images/Photo-Gallery-project-with-mobile-support.png?raw=true "Photo Gallery project with mobile support")
  
 	_Photo Gallery project with mobile support_
 
