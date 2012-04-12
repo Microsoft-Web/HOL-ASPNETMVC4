@@ -6,13 +6,13 @@ ASP.NET MVC 4 is a framework for building scalable, standards-based web applicat
 
 To begin with, when you create a new MVC 4 project there is now a mobile application project template you can use to build a standalone app specifically for mobile devices. Additionally, MVC 4 integrates with jQuery Mobile through a jQuery.Mobile.MVC NuGet package. jQuery Mobile is an HTML5-based framework for developing web apps that are compatible with all popular mobile device platforms, including Windows Phone, iPhone, Android and so on. However, if you need specialization, MVC 4 also enables you to serve different views for different devices and provide device-specific optimizations.
 
-In this hands-on lab, you will start with the MVC 4 "Internet Application" project template to create a Photo Gallery application. You will progressively enhance the app using jQuery Mobile and MVC 4's new features to make it compatible with different mobile devices and desktop web browsers. You will also learn about new code recipes for code generation and how MVC 4 makes it easier for you to write asynchronous action methods by supporting Task<ActionResult> return types.
+In this hands-on lab, you will start with the MVC 4 "Internet Application" project template to create a Photo Gallery application. You will progressively enhance the app using jQuery Mobile and MVC 4's new features to make it compatible with different mobile devices and desktop web browsers. You will also learn about new code recipes for code generation and how MVC 4 makes it easier for you to write asynchronous action methods by supporting Task\<ActionResult\> return types.
 
 ### Objectives ###
 
 In this hands-on lab, you will learn how to:
 
-- Take advantage of the enhancements to the ASP.NET MVC project templates ? including the new mobile application project template
+- Take advantage of the enhancements to the ASP.NET MVC project templates-including the new mobile application project template
 
 - Use the HTML5 viewport attribute and CSS media queries to improve the display on mobile devices
 
@@ -526,7 +526,7 @@ In this task, you will install and use a recipe to generate mobile versions of e
  
 	_View Mobilizer_
 
-1. Open the new generated **Index.mobile.cshtml** view and replace the existing \<ul> tag with this code. By doing this, you will be updating the \<ul> tag with jQuery Mobile data annotations to use the mobile themes from jQuery. 
+1. Open the new generated **Index.mobile.cshtml** view and replace the existing \<ul\> tag with this code. By doing this, you will be updating the \<ul\> tag with jQuery Mobile data annotations to use the mobile themes from jQuery. 
 
 	````HTML
 	<ul data-role="listview" data-inset="true" data-filter="true">
@@ -802,7 +802,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 	{
 	````
 
-1. Add the **async** keyword to the **Index** method and make it return the type **Task<ActionResult>**.
+1. Add the **async** keyword to the **Index** method and make it return the type **Task\<ActionResult\>**.
 
 	````C#
 	public async Task<ActionResult> Index()
