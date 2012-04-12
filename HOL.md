@@ -947,6 +947,7 @@ With code snippets, you have all the code you need at your fingertips. The lab d
 _Using Visual Studio code snippets to insert code into your project_
 
 _**To add a code snippet using the keyboard (C# only)**_
+
 1. Place the cursor where you would like to insert the code.
 
 1. Start typing the snippet name (without spaces or hyphens).
