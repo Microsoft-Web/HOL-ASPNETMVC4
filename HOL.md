@@ -312,7 +312,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 	   }
 	````
 
-1. Press **F5** to run the solution, and then browse to the following URL in order to test the mocked photo service:  **http://localhost:[port]/photo/gallery** (the [port] value depends on the current port where the application was launched). The request to this URL should retrieve the content of the _Photos.json_ file.
+1. Press **F5** to run the solution, and then browse to the following URL in order to test the mocked photo service:  **http://localhost:[port]/photo/gallery** (the [port] value depends on the current port where the application was launched). The request to this URL should retrieve the content of the **Photos.json** file.
 
  	![Testing the mocked photo service](./images/Testing-the-mocked-photo-service.png?raw=true "Testing the mocked photo service")
  
