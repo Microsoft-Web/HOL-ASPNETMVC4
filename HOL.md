@@ -78,7 +78,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 1. Open **Visual Studio 11**.
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. 
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. 
 
 	>**Note:** You will later customize the PhotoGallery MVC 4 solution you are now creating.
 
@@ -148,7 +148,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 	The MVC4 default template now includes KnockoutJS, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
-	> **Note:** You can get more information about KnockOutJS library in this link: [http://learn.knockoutjs.com/](http://learn.knockoutjs.com/).Additionally, you can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).
+	> **Note:** You can get more information about KnockOutJS library in this link: [http://learn.knockoutjs.com/](http://learn.knockoutjs.com/). Additionally, you can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).
 
   - **ASP.NET Universal providers included in the solution**
 
@@ -164,7 +164,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 ASP.NET MVC 4 facilitates the development of websites for mobile and tablet browsers. This template has the same application structure as the Internet Application template (notice that the controller code is practically identical), but its style was modified to render properly in touch-based mobile devices.
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP**.**NET MVC4 Web Application.** Name the project **PhotoGallery.Mobile**, select a location (or leave the default) and click **OK**.
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose the **ASP**.**NET MVC4 Web Application.** Name the project **PhotoGallery.Mobile**, select a location (or leave the default) and click **OK**.
 
 1. In the **New ASP.NET MVC 4 Project** dialog, select the **Mobile Application** project template and click **OK**. Make sure you have selected Razor as the view engine.
 
@@ -204,8 +204,7 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 1. Open **_Layout.cshtml**, located in the Views | Shared folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
 
-	````HTML
-	...
+	````
 	 <meta charset="utf-8" />
 	 <title>@ViewBag.Title</title> 
 	 @* <meta name="viewport" content="width=device-width" /> *@
