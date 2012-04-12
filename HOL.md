@@ -205,7 +205,7 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
  
 	_The site after commenting the viewport meta tag_
 
-1. In Visual Studio, press **SHIFT**+**F5** to stop debugging the application.
+1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
 1. Uncomment the viewport tag.
 
