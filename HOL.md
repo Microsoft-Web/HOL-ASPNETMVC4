@@ -253,7 +253,7 @@ You will now explore how the adaptive rendering works, improving the readability
 
 1. Replace the max-width attribute value set in 850 px with 10px, in order to disable the adaptive rendering, and press **CTRL + S** to save the changes. Return to the browser and press **CTRL + F5** to refresh the page with the changes you have made. Notice the differences in both pages when adjusting the width of the window.
 
- 	![In the left, the page is applying the @media style, in the right, the style is omitted](./images/In-the-left,-the-page-is-applying-the-@media-style,-in-the-right,-the-style-is-omitted.png?raw=true "In the left, the page is applying the @media style, in the right, the style is omitted")
+ 	![In the left, the page is applying the @media style, in the right, the style is omitted](./images/Figure17.png?raw=true "In the left, the page is applying the @media style, in the right, the style is omitted")
  
 	_In the left, the page is applying the @media style, in the right, the style is omitted_
 
