@@ -66,7 +66,7 @@ This hands-on lab includes the following exercises:
 
 > **Note:** Each exercise is accompanied by a starting solution-located in the **Begin** folder of the exercise-that allows you to follow each exercise independently of the others. Please be aware that the code snippets that are added during an exercise are missing from these starting solutions and that they will not necessarily work until you complete the exercise.
 
-> Inside the source code for an exercise, you will also find an End folder containing a Visual Studio solution with the resulting code from completing the steps in the corresponding exercise. You can use these solutions as guidance if you need additional help as you work through this hands-on lab.
+> Inside the source code for an exercise, you will also find an **End** folder containing a Visual Studio solution with the resulting code from completing the steps in the corresponding exercise. You can use these solutions as guidance if you need additional help as you work through this hands-on lab.
 
  
 
@@ -191,7 +191,7 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 1. The new template also uses the **Viewport meta tag**. Most mobile browsers define a width for a virtual browser window or "viewport", which is larger than the actual width of the mobile device. This enables mobile browsers to display the entire web page inside the virtual display. The **Viewport meta tag** allows web developers to set the width, height and scale of the browser area on mobile devices**.** The MVC 4 template for Mobile Applications sets the viewport to the device width ("width=device-width") in the layout template (_Views\Shared\_Layout.cshtml_), so that all the pages will have their viewport set to the device screen width. Notice that the Viewport tag will not change the default browser view.
 
-1. Open **_Layout.cshtml**, located in the Views | Shared folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
+1. Open **_Layout.cshtml**, located in the **Views | Shared** folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
 
 	````HTML
 	...
@@ -455,7 +455,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
             ![Photo Gallery project with mobile support](./images/Photo-Gallery-project-with-mobile-support.png?raw=true "Photo Gallery project with mobile support")  
 
            _Photo Gallery project with mobile support_  
-1. Open both **_Layout.cshtml** and **_Layout.Mobile.cshtml** (both under the Views | Shared folder) and make sure that the reference to jQuery matches the 1.6.4 version.
+1. Open both **_Layout.cshtml** and **_Layout.Mobile.cshtml** (both under the **Views | Shared** folder) and make sure that the reference to jQuery matches the 1.6.4 version.
 
  	![Updating the jQuery reference](./images/Updating-the-jQuery-reference.png?raw=true "Updating the jQuery reference")
  
