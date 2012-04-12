@@ -127,9 +127,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 	  ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
  
 	  _MVC 4 project template in different browser sizes_
-
 1. Close the browser to stop the debugger and return to Visual Studio.
-
 1. Now you are able to explore the solution and check out some of the new features introduced by ASP.NET MVC 4 in the project template.
 
  	![The MVC4 Internet Application Project Template](./images/The-MVC4-Internet-Application-Project-Template.png?raw=true "The MVC4 Internet Application Project Template")
