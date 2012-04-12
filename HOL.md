@@ -97,34 +97,34 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 1. Press **F5** to run the solution and see the renewed templates. You can check out the following features:
   - **Modern-style templates**
 
-	  The templates have been renewed, providing more modern-looking styles.
+	    The templates have been renewed, providing more modern-looking styles.
 
-	  ![MVC4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
+	    ![MVC4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
  
-	  _MVC4 restyled templates_
+	    _MVC4 restyled templates_
 
-	  ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
+	    ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
  
-	  _New Contact page_
+	    _New Contact page_
 
   - **Richer UI with JavaScript**
 
-	  Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
+	    Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
 
-	  ![Log On dialog](./images/Log-On-dialog.png?raw=true "Log On dialog")
+	    ![Log On dialog](./images/Log-On-dialog.png?raw=true "Log On dialog")
  
-	  _Log On dialog_
-
-	  ![Registration dialog](./images/Registration-dialog.png?raw=true "Registration dialog")
+	    _Log On dialog_
+  
+	    ![Registration dialog](./images/Registration-dialog.png?raw=true "Registration dialog")
  
-	  _Registration dialog_
+	    _Registration dialog_
 
   - **Adaptive Rendering**
 
-	  Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
-	  ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
+	    Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
+	    ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
  
-	  _MVC 4 project template in different browser sizes_
+	    _MVC 4 project template in different browser sizes_
 1. Close the browser to stop the debugger and return to Visual Studio.
 1. Now you are able to explore the solution and check out some of the new features introduced by ASP.NET MVC 4 in the project template.
 
