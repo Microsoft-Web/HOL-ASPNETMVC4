@@ -627,7 +627,7 @@ In this task, you will explore the sample implementation of a view-switcher adde
 1. Open the **ViewSwitcherController.cs** class located in the **Controllers** folder. Check out that SwitchView action is called by the link in the ViewSwitcher component, and notice the new HttpContext methods.  
     - The **HttpContext.ClearOverridenBrowser()** method removes any overridden user agent for the current request.  
     - The **HttpContext.SetOverridenBrowser()** method overrides the request's actual user agent value using the specified user agent.  
-	![ViewSwitcher Controller](./images/ViewSwitcher-Controller.png?raw=true "ViewSwitcher Controller")  
+            ![ViewSwitcher Controller](./images/ViewSwitcher-Controller.png?raw=true "ViewSwitcher Controller")  
 
             _ViewSwitcher Controller_  
             Browser Overriding is a core feature of ASP.NET MVC 4, which is also available even if you do not install the jQuery.Mobile.MVC package. However, this feature affects only view, layout, and partial-view, and it does not affect any of the features that depend on the Request.Browser object.
