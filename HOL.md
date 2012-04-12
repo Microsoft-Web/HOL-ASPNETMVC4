@@ -254,7 +254,7 @@ You will now explore how the adaptive rendering works, improving the readability
 
 1. Resize the browser's width, setting the windows to half or to less than a quarter of its original size. Notice what happens with the items in the header: Some elements will not appear in the visible area of the header.
 
-1. Open **Site.css** file from the Visual Studio Solution explorer, located in **Content** project folder. Press **CTRL+F** to open Visual Studio integrated search, and write **@media** to locate the**CSS media query**. 
+1. Open **Site.css** file from the Visual Studio Solution explorer, located in **Content** project folder. Press  **CTRL+F** to open Visual Studio integrated search, and write **@media** to locate the **CSS media query**. 
 
 	The media query condition defined in this template works in this way: When the browser's window size is below **850px**, the CSS rules applied are the ones defined inside this media block.
 
@@ -544,7 +544,7 @@ In this task, you will install and use a recipe to generate mobile versions of e
  
 	>You can learn more about jQuery Mobile conventions in the project documentation: [http://jquerymobile.com/demos/1.0rc2/](http://jquerymobile.com/demos/1.0rc2/)
 
-1. Press**CTRL+ S** to save the changes.
+1. Press **CTRL+ S** to save the changes.
 
 1. Switch to the **Windows Phone Emulator** and refresh the site. Notice the new look and feel of the gallery list, as well as the new search box located on the top. Then, type a word in the search box (for instance, **Tulips**) to start a search in the photo gallery.
 
