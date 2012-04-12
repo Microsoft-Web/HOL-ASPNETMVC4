@@ -95,7 +95,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 	> **Note:** Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C# / VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
 
 1. Press **F5** to run the solution and see the renewed templates. You can check out the following features:
-  - **Modern-style templates**
+    - **Modern-style templates**
 
 	    The templates have been renewed, providing more modern-looking styles.
 
@@ -105,9 +105,8 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 	    ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
  
-	    _New Contact page_
-
-  - **Richer UI with JavaScript**
+	    _New Contact page_    
+    - **Richer UI with JavaScript**
 
 	    Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
 
@@ -117,14 +116,13 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
   
 	    ![Registration dialog](./images/Registration-dialog.png?raw=true "Registration dialog")
  
-	    _Registration dialog_
-
-  - **Adaptive Rendering**
+	    _Registration dialog_  
+    - **Adaptive Rendering**
 
 	    Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
 	    ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
  
-	    _MVC 4 project template in different browser sizes_
+	    _MVC 4 project template in different browser sizes_  
 1. Close the browser to stop the debugger and return to Visual Studio.
 1. Now you are able to explore the solution and check out some of the new features introduced by ASP.NET MVC 4 in the project template.
 
