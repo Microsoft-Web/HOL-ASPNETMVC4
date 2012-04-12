@@ -106,6 +106,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 	  ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
  
 	  _New Contact page_
+
   - **Richer UI with JavaScript**
 
 	  Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
@@ -117,7 +118,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 	  ![Registration dialog](./images/Registration-dialog.png?raw=true "Registration dialog")
  
 	  _Registration dialog_
+
   - **Adaptive Rendering**
+
 	  Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
 	  ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
  
