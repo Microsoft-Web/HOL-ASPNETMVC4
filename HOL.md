@@ -92,7 +92,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
  
 	_Creating a new MVC4 Internet Application_
 
-	> **Note:** Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C#/VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
+	> **Note:** Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C# / VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
 
 1. Press **F5** to run the solution and see the renewed templates. You can check out the following features:
 
