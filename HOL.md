@@ -228,7 +228,9 @@ The flexibility provided by the adaptive rendering technique enables any customi
 
 By using the adaptive rendering technique, your site will be **displayed properly, regardless of the browser.** However, you should consider if the bandwidth extra load is a concern.
 
->**Note:** The basic format of a media query is: @media [Scope: all | handheld | print | projection | screen] \([property:value] and  ... [property:value]) Examples of media queries:
+>**Note:** The basic format of a media query is: @media [Scope: all | handheld | print | projection | screen] \([property:value] and  ... [property:value]) 
+
+Examples of media queries:
 >**@media all and (max-width: 1000px) and (min-width: 700px) {}:**For all the resolutions between 700px and 1000px.
 
 >**@media screen and (min-width: 400px) and (max-width: 700px) { ... }:**Only for screens. The resolution must be between 400 and 700px.
