@@ -469,7 +469,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 	You will notice that your application will look different in the Windows Phone emulator, as the jQuery.Mobile.MVC has created new assets in your project that show views optimized for mobile devices.
 
-	Notice the message at the top of the phone, showing the link that switches to the Desktop view. Additionally, the _Layout.Mobile.cshtml layout that was created by the package you have installed is including a different layout in the application.
+	Notice the message at the top of the phone, showing the link that switches to the Desktop view. Additionally, the **_Layout.Mobile.cshtml** layout that was created by the package you have installed is including a different layout in the application.
 
 	>**Note:** So far, there is no link to get back to mobile view. It will be included in later versions.
 
@@ -598,7 +598,7 @@ In this task, you will update the mobile layout to use a different theme than th
 
 #### Task 4 - Using the View-Switcher Component and the Browser Overriding Features ####
 
-A convention for mobile-optimized web pages is to add a link whose text is something like Desktop view or Full site mode that lets users switch to a desktop version of the page. The jQuery.Mobile.MVC package includes a sample **view-switcher** component for this purpose used in the _Layout.Mobile.cshtml view.
+A convention for mobile-optimized web pages is to add a link whose text is something like Desktop view or Full site mode that lets users switch to a desktop version of the page. The jQuery.Mobile.MVC package includes a sample **view-switcher** component for this purpose used in the **_Layout.Mobile.cshtml** view.
 
  ![Link to switch to Desktop View](./images/Link-to-switch-to-Desktop-View.png?raw=true "Link to switch to Desktop View")
  
