@@ -204,7 +204,8 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 1. Open **_Layout.cshtml**, located in the Views | Shared folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
 
-	````
+	````HTML
+	...
 	 <meta charset="utf-8" />
 	 <title>@ViewBag.Title</title> 
 	 @* <meta name="viewport" content="width=device-width" /> *@
@@ -253,15 +254,15 @@ You will now explore how the adaptive rendering works, improving the readability
 
 1. Resize the browser's width, setting the windows to half or to less than a quarter of its original size. Notice what happens with the items in the header: Some elements will not appear in the visible area of the header.
 
-1. Open **Site.css** file from the Visual Studio Solution explorer, located in **Content** project folder. Press  **CTRL+F** to open Visual Studio integrated search, and write **@media** to locate the **CSS media query**. 
+1. Open **Site.css** file from the Visual Studio Solution explorer, located in **Content** project folder. Press  **CTRL + F** to open Visual Studio integrated search, and write **@media** to locate the **CSS media query**. 
 
-	The media query condition defined in this template works in this way: When the browser's window size is below **850px**, the CSS rules applied are the ones defined inside this media block.
+	The media query condition defined in this template works in this way: When the browser's window size is below **850 px**, the CSS rules applied are the ones defined inside this media block.
 
  	![Locating the media query](./images/Locating-the-media-query.png?raw=true "Locating the media query")
  
 	_Locating the media query_
 
-1. Replace the max-width attribute value set in 850px with 10px, in order to disable the adaptive rendering, and press **CTRL + S** to save the changes. Return to the browser and press **CTRL+F5** to refresh the page with the changes you have made. Notice the differences in both pages when adjusting the width of the window.
+1. Replace the max-width attribute value set in 850 px with 10px, in order to disable the adaptive rendering, and press **CTRL + S** to save the changes. Return to the browser and press **CTRL + F5** to refresh the page with the changes you have made. Notice the differences in both pages when adjusting the width of the window.
 
  	![In the left, the page is applying the @media style, in the right, the style is omitted](./images/In-the-left,-the-page-is-applying-the-@media-style,-in-the-right,-the-style-is-omitted.png?raw=true "In the left, the page is applying the @media style, in the right, the style is omitted")
  
@@ -279,7 +280,7 @@ You will now explore how the adaptive rendering works, improving the readability
 
 	The Viewport meta tag and CSS media queries are not specific to ASP.NET MVC 4, so you can take advantage of these features in any web application.
 
-1. In Visual Studio, press **SHIFT**+**F5** to stop debugging the application.
+1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
  
 
@@ -331,7 +332,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 
 In this task, you will update the Home page to show the photo gallery by using the mocked service you created in the first task of this exercise. You will add model files and update the gallery views.
 
-1. In Visual Studio, press **SHIFT**+**F5** to stop debugging the application.
+1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
 1. Create the **Photo** class in the **Models** folder. To do this, right-click on the **Models** folder, select **Add** and click **Class**. Then, set the name to **Photo.cs** and click **Add**.
 
@@ -417,7 +418,7 @@ In this task, you will update the Home page to show the photo gallery by using t
  
 	_Photo Gallery_
 
-1. In Visual Studio, press **SHIFT**+**F5** to stop debugging the application.
+1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
  
 
@@ -441,7 +442,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 	> For more information see the following article: [http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
 
-1. Open the **Package Manager Console** by clicking the **Tools** > **Library Package Manager > Package Manager Console** menu option.
+1. Open the **Package Manager Console** by clicking the **Tools** > Library Package Manager > Package Manager Console** menu option.
 
  	![Opening the NuGet Package Manager Console](./images/Opening-the-NuGet-Package-Manager-Console.png?raw=true "Opening the NuGet Package Manager Console")
  
@@ -489,7 +490,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
  
 	_Mobile view of the Photo Gallery Home page_
 
-1. In Visual Studio, press **SHIFT**+**F5** to stop debugging the application.
+1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
  
 #### Task 2 - Using Recipes for Code Generation ####
@@ -543,7 +544,7 @@ In this task, you will install and use a recipe to generate mobile versions of e
  
 	>You can learn more about jQuery Mobile conventions in the project documentation: [http://jquerymobile.com/demos/1.0rc2/](http://jquerymobile.com/demos/1.0rc2/)
 
-1. Press **CTRL+ S** to save the changes.
+1. Press **CTRL + S** to save the changes.
 
 1. Switch to the **Windows Phone Emulator** and refresh the site. Notice the new look and feel of the gallery list, as well as the new search box located on the top. Then, type a word in the search box (for instance, **Tulips**) to start a search in the photo gallery.
 
@@ -704,7 +705,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 
 **Notice that this task is optional and you can continue throughout the lab without executing it.**
 
-1. In Visual Studio, press **SHIFT**+**F5** to stop debugging the application.
+1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
 1. Open **Global.asax.cs** and add the following using statement.
 
@@ -850,7 +851,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 Asynchronous action methods that return Task instances can also support time-outs. In this task, you will update the Index method code to handle a time-out scenario using a cancellation token.
 
-1. Go back to Visual Studio and press **SHIFT+F5** to stop debugging.
+1. Go back to Visual Studio and press **SHIFT + F5** to stop debugging.
 
 1. Add the following using statement to the **HomeController.cs** file.
 
@@ -970,6 +971,7 @@ _Press Tab to select the highlighted snippet_
 _Press Tab again and the snippet will expand_
 
 _**To add a code snippet using the mouse (C#, Visual Basic and XML)**_
+
 1. Right-click where you want to insert the code snippet.
 
 1. Select **Insert Snippet** followed by **My Code Snippets**.
