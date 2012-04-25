@@ -14,7 +14,7 @@
   You will also learn about new code recipes for code generation and how MVC 4 makes it easier to write asynchronous action methods by 
   supporting ActionResult return types.
 </Description>
-  <Document ConversionType="Html">.\Lab.docx</Document>
+  <Document ConversionType="Html">.\HOL.md</Document>
   <Title>What's New in ASP.NET MVC 4</Title>
   <Version>1.2.0</Version>
   <Source>.\Source</Source>
