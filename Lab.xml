@@ -8,11 +8,7 @@
     </Email>
     <Name></Name>
   </Author>
-  <Description>ASP.NET MVC 4 puts its focus on making it easier to develop mobile web applications. 
-  In this hands-on lab, you will start with the MVC 4 Internet Application project template and create a Photo Gallery application. 
-  You will progressively enhance the application using jQuery Mobile together with MVC 4 new features, to make it work great across different mobile devices and desktop web browsers. 
-  You will also learn about new code recipes for code generation and how MVC 4 makes it easier to write asynchronous action methods by 
-  supporting ActionResult return types.
+  <Description>ASP.NET MVC 4 puts its focus on making it easier to develop mobile web applications. In this hands-on lab, you will start with the MVC 4 Internet Application project template and create a Photo Gallery application. You will progressively enhance the application using jQuery Mobile together with MVC 4 new features, to make it work great across different mobile devices and desktop web browsers. You will also learn about new code recipes for code generation and how MVC 4 makes it easier to write asynchronous action methods by supporting ActionResult return types.
 </Description>
   <Document ConversionType="Html">.\HOL.md</Document>
   <Title>What's New in ASP.NET MVC 4</Title>
