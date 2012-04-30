@@ -973,3 +973,18 @@ _Right-click where you want to insert the code snippet and select Insert Snippet
  
  _Pick the relevant snippet from the list, by clicking on it_
  
+## Summary ##
+
+In this hands-on-lab, you've observed some of the new features resident in ASP.NET MVC 4. The following concepts have been discussed:
+
+- Take advantage of the enhancements to the ASP.NET MVC project templates-including the new mobile application project template
+
+- Use the HTML5 viewport attribute and CSS media queries to improve the display on mobile devices
+
+- Use jQuery Mobile for progressive enhancements and for building touch-optimized web UI
+
+- Create mobile-specific views
+
+- Use the view-switcher component to toggle between mobile and desktop views in the application
+
+- Create asynchronous controllers using task support
