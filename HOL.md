@@ -8,6 +8,7 @@ To begin with, when you create a new MVC 4 project there is now a mobile applica
 
 In this hands-on lab, you will start with the MVC 4 "Internet Application" project template to create a Photo Gallery application. You will progressively enhance the app using jQuery Mobile and MVC 4's new features to make it compatible with different mobile devices and desktop web browsers. You will also learn about new code recipes for code generation and how MVC 4 makes it easier for you to write asynchronous action methods by supporting Task\<ActionResult\> return types.
 
+<a name="Objectives" />
 ### Objectives ###
 
 In this hands-on lab, you will learn how to:
@@ -24,21 +25,18 @@ In this hands-on lab, you will learn how to:
 
 - Create asynchronous controllers using task support
 
- 
+<a name="Prerequisites" />
 ### Prerequisites ###
 
-- [Microsoft Visual Studio 11 Beta](http://go.microsoft.com/fwlink/?LinkId=240160)
+- [Microsoft Visual Studio Express 2012 for Web](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) or superior (read [Appendix B](#AppendixB) for instructions on how to install it).
 
-- ASP.NET MVC 4 (included in the Microsoft Visual Studio 11 Beta installation)
-
-- NuGet Visual Studio Extension (included in the Microsoft Visual Studio 11 Beta installation) 
+- [ASP.NET MVC 4](http://www.asp.net/mvc/mvc4) (included in the Microsoft Visual Studio 2012 installation)
 
 - [Windows Phone 7 Emulator](http://go.microsoft.com/fwlink/?LinkId=226403)
 
-- Optional - [Electric Mobile Simulator](http://www.electricplum.com/dlsim.html) only for Exercise 3 used to browse the web application with an iPhone simulator
+- Optional - [WebMatrix 2](http://www.microsoft.com/web/webmatrix/) with **Electric Plum iPhone Simulator** extension (only for Exercise 3 used to browse the web application with an iPhone simulator)
 
- >**Note:**  By the time this lab was released, the required phone emulators were unsupported on Windows 8 Consumer Preview. 
-
+<a name="Setup" />
 ### Setup ###
 
 Throughout the lab document, you will be instructed to insert code blocks. For your convenience, most of that code is provided as Visual Studio Code Snippets, which you can use from within Visual Studio to avoid having to add it manually.
@@ -50,33 +48,34 @@ To install the code snippets:
 1. Double-click the **Setup.cmd** file in this folder to install the Visual Studio code snippets.
 
  
-If you are not familiar with the Visual Studio Code Snippets, and want to learn how to use them, you can refer to the appendix from this document "[Appendix: Using Code Snippets](#Appendix)".
+If you are not familiar with the Visual Studio Code Snippets, and want to learn how to use them, you can refer to the appendix from this document "[Appendix: Using Code Snippets](#AppendixA)".
 
+<a name="Exercises" />
 ## Exercises ##
 
 This hands-on lab includes the following exercises:
 
-1. New MVC 4 Project Templates
+1. [New MVC 4 Project Templates](#Exercise1)
 
-1. Creating the Photo Gallery Web Application
+1. [Creating the Photo Gallery Web Application](#Exercise2)
 
-1. Adding Support for Mobile Devices
+1. [Adding Support for Mobile Devices](#Exercise3)
 
-1. Using Asynchronous Controllers
+1. [Using Asynchronous Controllers](#Exercise4)
 
 > **Note:** Each exercise is accompanied by a starting solution-located in the **Begin** folder of the exercise-that allows you to follow each exercise independently of the others. Please be aware that the code snippets that are added during an exercise are missing from these starting solutions and that they will not necessarily work until you complete the exercise.
 
 > Inside the source code for an exercise, you will also find an **End** folder containing a Visual Studio solution with the resulting code from completing the steps in the corresponding exercise. You can use these solutions as guidance if you need additional help as you work through this hands-on lab.
 
- 
 
+<a name="Exercise1" />
 ### Exercise 1: New MVC4 Project Templates ###
 
 In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project templates. In addition to the Internet Application template, already present in MVC 3, this version now includes a separate template for Mobile applications. First, you will look at some relevant features of each of the templates. Then, you will work on rendering your page properly on the different platforms by using the right approach.
 
 #### Task 1 - Exploring the Internet Application Template ####
 
-1. Open **Visual Studio 11**.
+1. Open **Visual Studio**.
 
 1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. 
 
@@ -105,30 +104,86 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 	    ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
  
-	    _New Contact page_    
-    - **Richer UI with JavaScript**
+	    _New Contact page_
 
-	    Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
-
-	    ![Log On dialog](./images/Log-On-dialog.png?raw=true "Log On dialog")
- 
-	    _Log On dialog_
-  
-	    ![Registration dialog](./images/Registration-dialog.png?raw=true "Registration dialog")
- 
-	    _Registration dialog_  
     - **Adaptive Rendering**
 
 	    Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
 	    ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
  
 	    _MVC 4 project template in different browser sizes_  
+
+    - **Richer UI with JavaScript**
+
+	    Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery Validations to validate the input fields from client-side.
+
+	    ![jQuery Validation](images/jquery-validation.png?raw=true)
+
+		 _jQuery Validation_
+
+		> **Note:** Notice the two log in sections, in the first section you can log in using a registerd account from the site and in the second section you can altenativelly log in using another authentication service like google (disabled by default).
+
+
 1. Close the browser to stop the debugger and return to Visual Studio.
-1. Now you are able to explore the solution and check out some of the new features introduced by ASP.NET MVC 4 in the project template.
+
+1. Open the file **AuthConfig.cs** located under the **App_Start** folder.
+
+1. Remove the comment from the last line to register Google client for _OAuth_ authentication.
+
+	<!-- mark:20 -->
+	````C#
+    public static class AuthConfig
+    {
+        public static void RegisterAuth()
+        {
+            // To let users of this site log in using their accounts from other sites such as Microsoft, Facebook, and Twitter,
+            // you must update this site. For more information visit http://go.microsoft.com/fwlink/?LinkID=252166
+
+            //OAuthWebSecurity.RegisterMicrosoftClient(
+            //    clientId: "",
+            //    clientSecret: "");
+
+            //OAuthWebSecurity.RegisterTwitterClient(
+            //    consumerKey: "",
+            //    consumerSecret: "");
+
+            //OAuthWebSecurity.RegisterFacebookClient(
+            //    appId: "",
+            //    appSecret: "");
+
+            OAuthWebSecurity.RegisterGoogleClient();
+        }
+    }
+	````
+	
+	> **Note:** Notice you can easily enable authentication using any OpenID or OAuth service like Facebook, Twitter, Microsoft, etc.
+
+1. Press **F5** to run the solution and navigate to the login page.
+
+1. Select **Google** service to log in.
+
+	![Selecting the log in service](images/selecting-the-log-in-service.png?raw=true)
+
+	_Selecting the log in service_
+
+1. Log in using your Google account.
+
+1. Allow the site (localhost) to retrieve information from Google account.
+
+1. Finally, you will have to register in the site to associate the Google account.
+
+	![Associate your Google account](images/associate-your-google-account.png?raw=true)
+
+	_Associating your Google account_
+
+1. Close the browser to stop the debugger and return to Visual Studio.
+
+1. Now let's explore the solution to check out another new features introduced by ASP.NET MVC 4 in the project template.
 
  	![The MVC4 Internet Application Project Template](./images/The-MVC4-Internet-Application-Project-Template.png?raw=true "The MVC4 Internet Application Project Template")
  
 	_The MVC4 Internet Application Project Template_  
+
     - **HTML 5 Markup**
 
 	    Browse template views to find out the new theme markup.
@@ -273,8 +328,8 @@ You will now explore how the adaptive rendering works, improving the readability
 
 1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
- 
 
+<a name="Exercise2" />
 ### Exercise 2: Creating the Photo Gallery Web Application ###
 
 In this exercise, you will work on a Photo Gallery application to display photos. You will start with the ASP.NET MVC 4 project template, and then you will add a feature to retrieve photos from a service and display them in the home page.
@@ -285,7 +340,7 @@ In the following exercise, you will update this solution to enhance the way it i
 
 In this task, you will create a mock of the photo service to retrieve the content that will be displayed in the gallery. To do this, you will add a new controller that will simply return a JSON file with the data of each photo.
 
-1. Open **Visual Studio 11** if not already opened.
+1. Open **Visual Studio** if not already opened.
 
 1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. Alternatively, you can continue working from your existing MVC 4 **Internet Application** solution from **Exercise 1** and skip the next step.
 
@@ -411,15 +466,15 @@ In this task, you will update the Home page to show the photo gallery by using t
 
 1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
- 
 
+<a name="Exercise3" />
 ### Exercise 3: Adding support for mobile devices ###
 
 One of the key updates in ASP.NET MVC 4 is the support for mobile development. In this exercise, you will explore MVC4 new features for mobile applications by extending the PhotoGallery solution you have created in the previous exercise.
 
 #### Task 1 - Installing jQuery Mobile in an ASP.NET MVC 4 Application ####
 
-1. Open **Visual Studio 11** if not already opened.
+1. Open **Visual Studio** if not already opened.
 
 1. Open the **MVC4Lab-Ex3-Begin.sln** solution located in **Source\Ex3-MobileSupport\Begin** from this lab's folder. Alternatively, you can continue working on your existing solution from the previous exercise.
 
@@ -753,6 +808,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
  	_Using different views for each mobile device_
  
 
+<a name="Exercise4" />
 ### Exercise 4: Using Asynchronous Controllers ###
 
  Microsoft .NET Framework 4.5 introduces new language features in C# and Visual Basic to provide a new foundation for asynchrony in .NET programming. This new foundation makes asynchronous programming similar to - and about as straightforward as - synchronous programming.
@@ -762,7 +818,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 #### Task 1 - Implementing an Asynchronous Controller ####
 
-1. Open **Visual Studio 11** if not already opened.
+1. Open **Visual Studio** if not already opened.
 
 1. Open the **MVC4Lab-Ex4-Begin.sln** solution located in **Source\Ex4-Async\Begin** from this lab's folder. Alternatively, you can continue working on your existing solution from the previous exercise.
 
@@ -827,7 +883,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 1. Run the application. You will notice no major changes, but your code will not block a thread from the thread pool making a better usage of the server resources and improving performance.
 
-	> **Note:** You can learn more about the new asynchronous programming features in the lab "**Asynchronous Programming in .NET 4.5 with C# and Visual Basic**" included in the Visual Studio 11 Training Kit.
+	> **Note:** You can learn more about the new asynchronous programming features in the lab "**Asynchronous Programming in .NET 4.5 with C# and Visual Basic**" included in the Visual Studio Training Kit.
 
  
 
@@ -922,8 +978,25 @@ Asynchronous action methods that return Task instances can also support time-out
  
  	_Time-out exception handled_
 
-<a name="Appendix" />
-## Appendix: Using Code Snippets ##
+<a name="Summary" />
+## Summary ##
+
+In this hands-on-lab, you've observed some of the new features resident in ASP.NET MVC 4. The following concepts have been discussed:
+
+- Take advantage of the enhancements to the ASP.NET MVC project templates-including the new mobile application project template
+
+- Use the HTML5 viewport attribute and CSS media queries to improve the display on mobile devices
+
+- Use jQuery Mobile for progressive enhancements and for building touch-optimized web UI
+
+- Create mobile-specific views
+
+- Use the view-switcher component to toggle between mobile and desktop views in the application
+
+- Create asynchronous controllers using task support
+
+<a name="AppendixA" />
+## Appendix A: Using Code Snippets ##
 
 With code snippets, you have all the code you need at your fingertips. The lab document will tell you exactly when you can use them, as shown in the following figure.
 
@@ -972,19 +1045,9 @@ _Right-click where you want to insert the code snippet and select Insert Snippet
  ![Pick the relevant snippet from the list, by clicking on it](./images/Pick-the-relevant-snippet-from-the-list,-by-clicking-on-it.png?raw=true "Pick the relevant snippet from the list, by clicking on it")
  
  _Pick the relevant snippet from the list, by clicking on it_
- 
-## Summary ##
 
-In this hands-on-lab, you've observed some of the new features resident in ASP.NET MVC 4. The following concepts have been discussed:
+<a name="AppendixC" />
+## Appendix C: Installing WebMatrix 2 and iPhone Simulator ##
+To run your site in a simulated iPhone device you can use the WebMatrix extension "Electric Mobile Simulator for the iPhone". Also, you can configure the same extension to run the simulator from Visual Studio 2012.
 
-- Take advantage of the enhancements to the ASP.NET MVC project templates-including the new mobile application project template
-
-- Use the HTML5 viewport attribute and CSS media queries to improve the display on mobile devices
-
-- Use jQuery Mobile for progressive enhancements and for building touch-optimized web UI
-
-- Create mobile-specific views
-
-- Use the view-switcher component to toggle between mobile and desktop views in the application
-
-- Create asynchronous controllers using task support
+**C:\Users\\_{CurrentUser}_\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe**
