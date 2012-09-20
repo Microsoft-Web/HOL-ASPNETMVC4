@@ -831,7 +831,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 	>**Note:** The **async** keyword is one of the new keywords the .NET Framework 4.5 provides; it tells the compiler that this method contains asynchronous code. A **Task** object represents an asynchronous operation that may complete at some point in the future.
 
-1. Replace the **client.Get()** calls with the async version **client.GetAsync()** as shown below.
+1. Replace the **client.GetAsync()** call with the full async version using await keyword as shown below.
 
 	(Code Snippet - _MVC4 Lab - Ex04 - GetAsync_)
 
@@ -843,22 +843,24 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 	    ...
 	````
 
-	> **Note:** In the previous code, you are using the asynchronous version of the **Get** method -  **GetAsync** -  which is a new method added by the .NET Framework 4.5 and has different signature since it returns a **Task** type object. 
+	> **Note:** In the previous version, you were using the **Result** property from the **Task** object to block the thread until the result is returned (sync version). 
 
 	>Adding the **await** keyword tells the compiler to asynchronously wait for the task returned from the method call. This means that the rest of the code will be executed as a callback only after the awaited method completes. Another thing to notice is that you do not need to change your try-catch block in order to make this work: the exceptions that happen in background or in foreground will still be caught without any extra work using a handler provided by the framework.
 
-1. Change the code to continue with the asynchronous implementation by commenting out the latter two lines of the method and replacing them with the new code as shown below
+1. Change the code to continue with the asynchronous implementation by replacing the lines with the new code as shown below
 
 	(Code Snippet - _MVC4 Lab - Ex04 - ReadAsStringAsync_)
-
+	<!-- mark:5-6 -->
 	````C#
-	//var jss = new JavaScriptSerializer();
-	//var result = jss.Deserialize<List<Photo>>(response.Content.ReadAsString());
-	
-	var jss = new JavaScriptSerializer();
-	var responseString = await response.Content.ReadAsStringAsync();
-	var result = jss.Deserialize<List<Photo>>(responseString);
-	
+    public async Task<ActionResult> Index()
+    {
+        var client = new HttpClient();
+        var response = await client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme));
+        var value = await response.Content.ReadAsStringAsync();
+        var result = await JsonConvert.DeserializeObjectAsync<List<Photo>>(value);
+
+        return View(result);
+    }
 	````
 
 1. Run the application. You will notice no major changes, but your code will not block a thread from the thread pool making a better usage of the server resources and improving performance.
@@ -881,28 +883,27 @@ Asynchronous action methods that return Task instances can also support time-out
 
 1. Update the Index action to receive a **CancellationToken** argument.
 
+	<!-- mark:1 -->
 	````C#
 	public async Task<ActionResult> Index(CancellationToken cancellationToken)
 	{
 	    ...
 	````
 
-1. Refactor the service calls to use **SendAsync** instead of **GetAsync** and receive the cancellation token.
+1. Update the **GetAsync** call to pass the cancellation token.
 
 	(Code Snippet - _MVC4 Lab - Ex04 - SendAsync with CancellationToken_)
-
+	<!-- mark:4 -->
 	````C#
-	public async Task<ActionResult> Index(CancellationToken cancellationToken)
-	{
-	    var client = new HttpClient();
-	    var photosRequest = new HttpRequestMessage(HttpMethod.Get, Url.Action("gallery", "photo", null, Request.Url.Scheme));
-	    var response = await client.SendAsync(photosRequest, cancellationToken);
-	            
-	    var jss = new JavaScriptSerializer();
-	    var result = jss.Deserialize<List<Photo>>(response.Content.ReadAsString());
-	
-	    return View(result);
-	}
+    public async Task<ActionResult> Index(CancellationToken cancellationToken)
+    {
+        var client = new HttpClient();
+        var response = await client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme), cancellationToken);
+        var value = await response.Content.ReadAsStringAsync();
+        var result = await JsonConvert.DeserializeObjectAsync<List<Photo>>(value);
+
+        return View(result);
+    }
 	````
 
 1. Decorate the _Index_ method with an **AsyncTimeout** attribute set to 500 milliseconds and a **HandleError** attribute configured to handle **TaskCanceledException** by redirecting to a **TimedOut** view.
@@ -911,13 +912,14 @@ Asynchronous action methods that return Task instances can also support time-out
 
 	````C#
 	[AsyncTimeout(500)]
-	[HandleError(ExceptionType = typeof(TaskCanceledException), View = "TimedOut")]
+	[HandleError(ExceptionType = typeof(TimeoutException), View = "TimedOut")]
 	public async Task<ActionResult> Index(CancellationToken cancellationToken)
 	{
 	````
 
 1. Open the **PhotoController** class and update the **Gallery** method to delay the execution 1000 miliseconds (1 second) to simulate a long running task.
 
+	<!-- mark:3 -->
 	````C#
 	public ActionResult Gallery()
 	{
