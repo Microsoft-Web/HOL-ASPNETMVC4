@@ -29,7 +29,7 @@ input[type="password"].input-validation-error {
 }
 
 .ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
-    padding: 0px;
+    padding: 0px !important;
 }
 
 li.item span.image-overlay

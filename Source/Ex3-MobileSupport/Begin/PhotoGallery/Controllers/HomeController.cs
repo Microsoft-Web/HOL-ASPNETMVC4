@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
+
+using System.Net.Http;
 using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 using PhotoGallery.Models;
 
 namespace PhotoGallery.Controllers
@@ -13,25 +15,25 @@ namespace PhotoGallery.Controllers
     {
         public ActionResult Index()
         {
-            var client = new WebClient();
-			var response = client.DownloadString(Url.Action("gallery", "photo", null, Request.Url.Scheme));
+            var client = new HttpClient();
+            var response = client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme)).Result;
+            var value = response.Content.ReadAsStringAsync().Result;
 
-            var jss = new JavaScriptSerializer();
-            var result = jss.Deserialize<List<Photo>>(response);
+            var result = JsonConvert.DeserializeObject<List<Photo>>(value);
 
             return View(result);
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your quintessential app description page.";
+            ViewBag.Message = "Your app description page.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your quintessential contact page.";
+            ViewBag.Message = "Your contact page.";
 
             return View();
         }

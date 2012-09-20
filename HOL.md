@@ -411,7 +411,6 @@ In this task, you will update the Home page to show the photo gallery by using t
 	<!-- mark:1-6 -->
 	````C#
 	using System.Net.Http;
-	using System.Threading.Tasks;
 	using System.Web.Script.Serialization;
 	using Newtonsoft.Json;
 	using PhotoGallery.Models;
@@ -420,22 +419,19 @@ In this task, you will update the Home page to show the photo gallery by using t
 1. Update the **Index** action to use **HttpClient** to retrieve the gallery data, and then use the **JavaScriptSerializer** to deserialize it to the view model.
 
 	(Code Snippet - _MVC4 Lab - Ex02 - Index Action_)
-	<!-- mark:1-10 -->
+	<!-- mark:3-9 -->
 	````C#
-	public async Task<ActionResult> Index()
+	public ActionResult Index()
 	{
-		 var client = new HttpClient();
-		 var response = await client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme));
-		 var value = await response.Content.ReadAsStringAsync();
+		var client = new HttpClient();
+		var response = client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme)).Result;
+		var value = response.Content.ReadAsStringAsync().Result;
 
-		 var result = JsonConvert.DeserializeObject<List<Photo>>(value);
+		var result = JsonConvert.DeserializeObject<List<Photo>>(value);
 
-		 return View(result);
+		return View(result);
 	}
 	````
-
-	> **Note:** The ASP.NET MVC 4 Controller class in combination .NET 4.5  enables you to write asynchronous action methods that return an object of type **Task\<ActionResult\>**. The **await** keyword is syntactical shorthand for indicating that a piece of code should asynchronously wait on some other piece of code. The **async** keyword represents a hint that you can use to mark methods as task-based asynchronous methods. 
-
 
 1. Open the **Index.cshtml** file located under the **Views\Home** folder and replace all the content with the following code.
 
@@ -509,17 +505,31 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
             ![Photo Gallery project with mobile support](./images/Photo-Gallery-project-with-mobile-support.png?raw=true "Photo Gallery project with mobile support")  
 
            _Photo Gallery project with mobile support_  
-1. Open both **_Layout.cshtml** and **_Layout.Mobile.cshtml** (both under the **Views | Shared** folder) and make sure that the reference to jQuery matches the 1.6.4 version.
 
- 	![Updating the jQuery reference](./images/Updating-the-jQuery-reference.png?raw=true "Updating the jQuery reference")
- 
-	_Updating the jQuery reference_
+1. Register the Mobile bundles. To do this, open the **Global.asax.cs** file and add the following line.
+
+	(Code Snippet - _MVC4 Lab - Ex03 - Register Mobile Bundles_)
+	<!-- mark:9 -->
+	````C#
+	protected void Application_Start()
+	{
+		 AreaRegistration.RegisterAllAreas();
+
+		 WebApiConfig.Register(GlobalConfiguration.Configuration);
+		 FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+		 RouteConfig.RegisterRoutes(RouteTable.Routes);
+		 BundleConfig.RegisterBundles(BundleTable.Bundles);
+		 BundleMobileConfig.RegisterBundles(BundleTable.Bundles);
+		 AuthConfig.RegisterAuth();
+	}
+
+	````
 
 1. Run the application using a desktop web browser. 
 
 1. Open the **Windows Phone 7 Emulator,** located in **Start Menu | All Programs | Windows Phone SDK 7.1 | Windows Phone Emulator.** 
 
-1. In the phone start screen, open Internet Explorer. Check out the URL where the application started and browse to that URL with the phone browser (e.g. _http://localhost:1385/_).
+1. In the phone start screen, open Internet Explorer. Check out the URL where the application started and browse to that URL with the phone browser (e.g. _http://localhost:[PortNumber]/_).
 
 	You will notice that your application will look different in the Windows Phone emulator, as the jQuery.Mobile.MVC has created new assets in your project that show views optimized for mobile devices.
 
@@ -534,40 +544,13 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
  
-#### Task 2 - Using Recipes for Code Generation ####
+#### Task 2 - Creating Mobile Views ####
 
-The new recipes feature in ASP.NET MVC 4 enables Visual Studio to generate solution-specific code based on packages that you can install using NuGet. This recipes framework makes it easy for developers to write code-generation plugins, which have the ability to replace the built-in code generators for Add Area, Add Controller, and Add View. Since recipes are deployed as NuGet packages, they can easily be checked into source control and shared with all developers in the project automatically. They are also available on a per-solution basis.
+In this task, you will create a mobile version of the index view with content adapted for better appareance in mobile devices.
 
-In this task, you will install and use a recipe to generate mobile versions of existing views.
+1. Copy the **Views\Home\Index.cshtml** view and paste it to create a copy, rename the new file to **Index.Mobile.cshtml**.
 
-1. Open the NuGet **Package Manager Console**. To do this, use the menu **Tools | Library Package Manager | Package Manager Console**.
-
-1. In the **Package Manager Console** run the following command to install the **MvcHaack.ViewMobilizer** package.
-
-	````PM
-	Install-Package MvcHaack.ViewMobilizer
-	````
-	>**Note:** In this lab you will use a sample code recipe available from NuGet. If you want to learn how to create a code recipe, read the following article: [http://haacked.com/archive/2011/09/22/writing-a-recipe-for-asp-net-mvc-4-developer-preview.aspx](http://haacked.com/archive/2011/09/22/writing-a-recipe-for-asp-net-mvc-4-developer-preview.aspx)
-
-1. Right-click the **Views** | **Home** folder, select **Add** | **Run Recipe**.
-
- 	![Running the code recipe](./images/Running-the-code-recipe.png?raw=true "Running the code recipe")
- 
-	_Running the code recipe_
-
-1. In the **Run Recipe** dialog select the **View Mobilizer** recipe and click **OK**.
-
- 	![Run Recipe dialog box](./images/Run-Recipe-dialog-box.png?raw=true "Run Recipe dialog box")
- 
-	_Run Recipe dialog box_
-
-1. Select the **Views\Home\Index.cshtml** view, leave the default "mobile" Device suffix, and then click **Mobilize!**.
-
- 	![View Mobilizer](./images/View-Mobilizer.png?raw=true "View Mobilizer")
- 
-	_View Mobilizer_
-
-1. Open the new generated **Index.mobile.cshtml** view and replace the existing \<ul\> tag with this code. By doing this, you will be updating the \<ul\> tag with jQuery Mobile data annotations to use the mobile themes from jQuery. 
+1. Open the new created **Index.Mobile.cshtml** view and replace the existing \<ul\> tag with this code. By doing this, you will be updating the \<ul\> tag with jQuery Mobile data annotations to use the mobile themes from jQuery. 
 
 	````HTML
 	<ul data-role="listview" data-inset="true" data-filter="true">
@@ -583,7 +566,7 @@ In this task, you will install and use a recipe to generate mobile versions of e
 
 	>\- The **data-filter** attribute set to **true** will generate a search box.
  
-	>You can learn more about jQuery Mobile conventions in the project documentation: [http://jquerymobile.com/demos/1.0rc2/](http://jquerymobile.com/demos/1.0rc2/)
+	>You can learn more about jQuery Mobile conventions in the project documentation: [http://jquerymobile.com/demos/1.1.1/](http://jquerymobile.com/demos/1.1.1/)
 
 1. Press **CTRL + S** to save the changes.
 
@@ -601,7 +584,7 @@ In this task, you will install and use a recipe to generate mobile versions of e
 
 	````CSS
 	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
-	    padding: 0px;
+	    padding: 0px !important;
 	}
 	
 	li.item span.image-overlay
@@ -678,7 +661,7 @@ In this task, you will explore the sample implementation of a view-switcher adde
 
  	![ViewSwitcher partial view](./images/ViewSwitcher-partial-view.png?raw=true "ViewSwitcher partial view")
  
-	__ViewSwitcher partial view_
+	_ViewSwitcher partial view_
 
 1. Open the **ViewSwitcherController.cs** class located in the **Controllers** folder. Check out that SwitchView action is called by the link in the ViewSwitcher component, and notice the new HttpContext methods.  
     - The **HttpContext.ClearOverridenBrowser()** method removes any overridden user agent for the current request.  
@@ -702,6 +685,7 @@ In this task, you will update the desktop layout to include the view-switcher. T
 
 1. Find the login section and insert a call to render the **_ViewSwitcher** partial view below the **_LogOnPartial** partial view. Then, press **CTRL + S** to save the changes.
 
+	<!-- mark:5 -->
 	````HTML
 	<div class="float-right">
 	    <section id="login">
@@ -720,7 +704,7 @@ In this task, you will update the desktop layout to include the view-switcher. T
  
 	_View Switcher rendered in desktop view_
 
-1. Switch to the Mobile view again and browse to **About** page. Notice that, even if you haven't created an About.Mobile.cshtml view, the About page is displayed using the mobile layout (_Layout.Mobile.cshtml). 
+1. Switch to the Mobile view again and browse to **About** page (http://localhost[port]/Home/About). Notice that, even if you haven't created an About.Mobile.cshtml view, the About page is displayed using the mobile layout (_Layout.Mobile.cshtml). 
 
  	![About page](./images/About-page.png?raw=true "About page")
  
@@ -753,14 +737,11 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 1. Add the following highlighted code into the Application_Start method.
 
 	(Code Snippet - _MVC4 Lab - Ex03 - iPhone DisplayMode_)
-
+	<!-- mark:5-10 -->
 	````C#
 	protected void Application_Start()
 	{
-	    AreaRegistration.RegisterAllAreas();
-	
-	    RegisterGlobalFilters(GlobalFilters.Filters);
-	    RegisterRoutes(RouteTable.Routes);
+	    // ...
 	
 	    DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("iPhone")
 	    {
@@ -782,7 +763,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 1. Open **_Layout.iPhone.csthml** you created in the previous step.
 
 1. Find the div element with the data-role attribute set to **page** and change the **data-theme** attribute to "**a**".
-
+	<!-- mark:2 -->
 	````XML
 	<body> 
 	    <div data-role="page" data-theme="a">

@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using PhotoGallery.Models;
@@ -14,11 +13,11 @@ namespace PhotoGallery.Controllers
 {
     public class HomeController : Controller
     {
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             var client = new HttpClient();
-            var response = await client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme));
-            var value = await response.Content.ReadAsStringAsync();
+            var response = client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme)).Result;
+            var value = response.Content.ReadAsStringAsync().Result;
 
             var result = JsonConvert.DeserializeObject<List<Photo>>(value);
 
