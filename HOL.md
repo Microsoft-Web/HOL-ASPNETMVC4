@@ -32,7 +32,7 @@ In this hands-on lab, you will learn how to:
 
 - [ASP.NET MVC 4](http://www.asp.net/mvc/mvc4) (included in the Microsoft Visual Studio 2012 installation)
 
-- [Windows Phone 7 Emulator](http://go.microsoft.com/fwlink/?LinkId=226403)
+- Windows Phone Emulator (included in the [Windows Phone 7.1.1 SDK](http://www.microsoft.com/en-us/download/details.aspx?id=29233))
 
 - Optional - [WebMatrix 2](http://www.microsoft.com/web/webmatrix/) with **Electric Plum iPhone Simulator** extension (only for Exercise 3 used to browse the web application with an iPhone simulator)
 
@@ -178,7 +178,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 1. Close the browser to stop the debugger and return to Visual Studio.
 
-1. Now let's explore the solution to check out another new features introduced by ASP.NET MVC 4 in the project template.
+1. Now explore the solution to check out some other new features introduced by ASP.NET MVC 4 in the project template.
 
  	![The MVC4 Internet Application Project Template](./images/The-MVC4-Internet-Application-Project-Template.png?raw=true "The MVC4 Internet Application Project Template")
  
@@ -210,7 +210,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 ASP.NET MVC 4 facilitates the development of websites for mobile and tablet browsers. This template has the same application structure as the Internet Application template (notice that the controller code is practically identical), but its style was modified to render properly in touch-based mobile devices.
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose the **ASP**.**NET MVC4 Web Application.** Name the project **PhotoGallery.Mobile**, select a location (or leave the default) and click **OK**.
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose the **ASP.NET MVC4 Web Application.** Name the project **PhotoGallery.Mobile**, select a location (or leave the default), select "Add to solution" and click **OK**.
 
 1. In the **New ASP.NET MVC 4 Project** dialog, select the **Mobile Application** project template and click **OK**. Make sure you have selected Razor as the view engine.
 
@@ -230,13 +230,13 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 	    ![Mobile-application-template-using-HTML5-markup](images/Mobile-application-template-using-HTML5-markup.png?raw=true)
 
-	    _Mobile application template using HTML5 markup, (LogOn.cshtml and index.cshtml)_
+	    _Mobile application template using HTML5 markup, (Login.cshtml and index.cshtml)_
 
 1. Press **F5** to run the solution.
 
-1. Open the **Windows Phone 7 Emulator,** located in **Start Menu | All Programs | Windows Phone SDK 7.1 | Windows Phone Emulator.** 
+1. Open the **Windows Phone 7 Emulator**. 
 
-1. In the phone start screen, open Internet Explorer. Check out the URL where the desktop application started and browse to that URL from the phone (e.g. _http://localhost:6385/_).
+1. In the phone start screen, open Internet Explorer. Check out the URL where the desktop application started and browse to that URL from the phone (e.g. _http://localhost:[PortNumber]/_).
 
 1. Now you are able to enter the login page or check out the about page. Notice that the style of the website is based on the new Metro app for mobile. The ASP.NET MVC 4 project template is correctly displayed on mobile devices, making sure all the elements of the page are visible and enabled. Notice that the links on the header are big enough to be clicked or tapped.
 
@@ -296,7 +296,7 @@ Examples of media queries:
 
 You will now explore how the adaptive rendering works, improving the readability of the MVC 4 default website template.
 
-1. Open the **PhotoGallery.sln** Internet application you have created at Task 1. Press **F5** to run the solution. 
+1. Open the **PhotoGallery.sln** solution you have created at Task 1 and select the **PhotoGallery** project. Press **F5** to run the solution. 
 
 1. Resize the browser's width, setting the windows to half or to less than a quarter of its original size. Notice what happens with the items in the header: Some elements will not appear in the visible area of the header.
 
@@ -308,7 +308,7 @@ You will now explore how the adaptive rendering works, improving the readability
  
 	_Locating the media query_
 
-1. Replace the max-width attribute value set in 850 px with 10px, in order to disable the adaptive rendering, and press **CTRL + S** to save the changes. Return to the browser and press **CTRL + F5** to refresh the page with the changes you have made. Notice the differences in both pages when adjusting the width of the window.
+1. Replace the max-width attribute value set in 850 px with **10px**, in order to disable the adaptive rendering, and press **CTRL + S** to save the changes. Return to the browser and press **CTRL + F5** to refresh the page with the changes you have made. Notice the differences in both pages when adjusting the width of the window.
 
  	![In the left, the page is applying the @media style, in the right, the style is omitted](./images/Figure17.png?raw=true "In the left, the page is applying the @media style, in the right, the style is omitted")
  
@@ -348,7 +348,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 
 1. In the **Solution Explorer**, right-click the **App_Data** folder of your project, and select **Add | Existing Item**. Browse to the **Source\Assets\App_Data** folder of this lab and add the **Photos.json** file.
 
-1. Create a new controller with the name **PhotoController**. To do this, right-click on the **Controllers** folder, go to **Add** and select **Controller.** Complete the controller name, leave the **Empty controller** template and click **Add**.
+1. Create a new controller with the name **PhotoController**. To do this, right-click on the **Controllers** folder, go to **Add** and select **Controller.** Complete the controller name, leave the **Empty MVC controller** template and click **Add**.
 
  	![Adding the PhotoController](./images/Adding-the-PhotoController.png?raw=true "Adding the PhotoController")
  
@@ -356,8 +356,8 @@ In this task, you will create a mock of the photo service to retrieve the conten
 
 1. Replace the **Index** method with the following **Gallery** action, and return the content from the JSON file you have recently added to the project.
 
-	(Code Snippet - _MVC4 Lab - Ex02 - PhotoController_)
-
+	(Code Snippet - _MVC4 Lab - Ex02 - Gallery Action_)
+	<!-- mark:3-6 -->
 	````C#
 	public class PhotoController : Controller
 	{
@@ -365,6 +365,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 	   {
 	      return this.File("~/App_Data/Photos.json", "application/json");
 	   }
+	}
 	````
 
 1. Press **F5** to run the solution, and then browse to the following URL in order to test the mocked photo service:  **http://localhost:[port]/photo/gallery** (the [port] value depends on the current port where the application was launched). The request to this URL should retrieve the content of the **Photos.json** file.
@@ -373,6 +374,9 @@ In this task, you will create a mock of the photo service to retrieve the conten
  
  	_Testing the mocked photo service_
  
+In a real implementation you could use [ASP.NET Web API](http://www.asp.net/web-api) to implement the Photo Gallery service.
+ASP.NET Web API is a framework that makes it easy to build HTTP services that reach a broad range of clients, including browsers and mobile devices. ASP.NET Web API is an ideal platform for building RESTful applications on the .NET Framework.
+
 
 #### Task 2 - Displaying the Photo Gallery ####
 
@@ -385,7 +389,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 1. Add the following members to the **Photo** class.
 
 	(Code Snippet - _MVC4 Lab - Ex02 - Photo model_)
-
+	<!-- mark:1-10 -->
 	````C#
 	public class Photo
 	{
@@ -404,29 +408,34 @@ In this task, you will update the Home page to show the photo gallery by using t
 1. Add the following using statements.
 
 	(Code Snippet - _MVC4 Lab - Ex02 - HomeController Usings_)
-
+	<!-- mark:1-6 -->
 	````C#
-	using System.Net;
+	using System.Net.Http;
+	using System.Threading.Tasks;
 	using System.Web.Script.Serialization;
+	using Newtonsoft.Json;
 	using PhotoGallery.Models;
 	````
 
-1. Update the **Index** action to use **WebClient** to retrieve the gallery data, and then use the **JavaScriptSerializer** to deserialize it to the view model.
+1. Update the **Index** action to use **HttpClient** to retrieve the gallery data, and then use the **JavaScriptSerializer** to deserialize it to the view model.
 
 	(Code Snippet - _MVC4 Lab - Ex02 - Index Action_)
-
+	<!-- mark:1-10 -->
 	````C#
-	public ActionResult Index()
+	public async Task<ActionResult> Index()
 	{
-	    var client = new HttpClient();
-	    var response = client.Get(Url.Action("gallery", "photo", null, Request.Url.Scheme));
-	    
-	    var jss = new JavaScriptSerializer();
-	    var result = jss.Deserialize<List<Photo>>(response.Content.ReadAsString());
-	    
-	    return View(result);
+		 var client = new HttpClient();
+		 var response = await client.GetAsync(Url.Action("gallery", "photo", null, Request.Url.Scheme));
+		 var value = await response.Content.ReadAsStringAsync();
+
+		 var result = JsonConvert.DeserializeObject<List<Photo>>(value);
+
+		 return View(result);
 	}
 	````
+
+	> **Note:** The ASP.NET MVC 4 Controller class in combination .NET 4.5  enables you to write asynchronous action methods that return an object of type **Task\<ActionResult\>**. The **await** keyword is syntactical shorthand for indicating that a piece of code should asynchronously wait on some other piece of code. The **async** keyword represents a hint that you can use to mark methods as task-based asynchronous methods. 
+
 
 1. Open the **Index.cshtml** file located under the **Views\Home** folder and replace all the content with the following code.
 
@@ -456,7 +465,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 
 1. In the **Solution Explorer**, right-click the **Content** folder of your project, and select **Add | Existing Item**. Browse to the **Source\Assets\Content** folder of this lab and add the **Site.css** file. You will have to confirm its replacement. If you have the **Site.css** file open, you will have to confirm to reload the file also.
 
-1. Open Windows Explorer and copy the entire **Photos** folder located under the **Source\Assets** folder of this lab to the root folder of your project in Solution Explorer.
+1. Open File Explorer and copy the entire **Photos** folder located under the **Source\Assets** folder of this lab to the root folder of your project in Solution Explorer.
 
 1. Run the application. You should now see the home page displaying the photos in the gallery.
 
@@ -478,23 +487,13 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 1. Open the **MVC4Lab-Ex3-Begin.sln** solution located in **Source\Ex3-MobileSupport\Begin** from this lab's folder. Alternatively, you can continue working on your existing solution from the previous exercise.
 
-1. Right-click the solution and select the menu item **Enable NuGet Package Restore** to update all of the NuGet packages in each of the projects in the solution.
-
- 	![Updating solution NuGet packages](./images/Updating-solution-NuGet-packages.png?raw=true "Updating solution NuGet packages")
- 
-	_Updating solution NuGet packages_
-
-	> **Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size.  With NuGet Power Tools, by specifying the package versions in the packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open a new solution in this lab.
-
-	> For more information see the following article: [http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-
 1. Open the **Package Manager Console** by clicking the **Tools** > **Library Package Manager** > **Package Manager Console** menu option.
 
  	![Opening the NuGet Package Manager Console](./images/Opening-the-NuGet-Package-Manager-Console.png?raw=true "Opening the NuGet Package Manager Console")
  
 	_Opening the NuGet Package Manager Console_
 
-1. In the Package Manager Console run the following command to install the **jQuery.Mobile.MVC** package. The installation process also upgrades jQuery from version 1.6.2 to 1.6.4.
+1. In the Package Manager Console run the following command to install the **jQuery.Mobile.MVC** package.
 
 	jQuery Mobile is an open source library for building touch-optimized web UI. The jQuery.Mobile.MVC NuGet package includes helpers to use jQuery Mobile with an ASP.NET MVC 4 application.
 
