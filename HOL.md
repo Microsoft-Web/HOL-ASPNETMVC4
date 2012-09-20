@@ -4,9 +4,9 @@
 
 ASP.NET MVC 4 is a framework for building scalable, standards-based web applications using well-established design patterns and the power of the ASP.NET and the .NET framework. This new, fourth version of the framework focuses on making mobile web application development easier.
 
-To begin with, when you create a new MVC 4 project there is now a mobile application project template you can use to build a standalone app specifically for mobile devices. Additionally, MVC 4 integrates with jQuery Mobile through a jQuery.Mobile.MVC NuGet package. jQuery Mobile is an HTML5-based framework for developing web apps that are compatible with all popular mobile device platforms, including Windows Phone, iPhone, Android and so on. However, if you need specialization, MVC 4 also enables you to serve different views for different devices and provide device-specific optimizations.
+To begin with, when you create a new ASP.NET MVC 4 project there is now a mobile application project template you can use to build a standalone app specifically for mobile devices. Additionally, ASP.NET MVC 4 integrates with jQuery Mobile through a jQuery.Mobile.MVC NuGet package. jQuery Mobile is an HTML5-based framework for developing web apps that are compatible with all popular mobile device platforms, including Windows Phone, iPhone, Android and so on. However, if you need specialization, ASP.NET MVC 4 also enables you to serve different views for different devices and provide device-specific optimizations.
 
-In this hands-on lab, you will start with the MVC 4 "Internet Application" project template to create a Photo Gallery application. You will progressively enhance the app using jQuery Mobile and MVC 4's new features to make it compatible with different mobile devices and desktop web browsers. You will also learn about new code recipes for code generation and how MVC 4 makes it easier for you to write asynchronous action methods by supporting Task\<ActionResult\> return types.
+In this hands-on lab, you will start with the ASP.NET MVC 4 "Internet Application" project template to create a Photo Gallery application. You will progressively enhance the app using jQuery Mobile and ASP.NET MVC 4's new features to make it compatible with different mobile devices and desktop web browsers. You will also learn about new code recipes for code generation and how ASP.NET MVC 4 makes it easier for you to write asynchronous action methods by supporting Task\<ActionResult\> return types.
 
 <a name="Objectives" />
 ### Objectives ###
@@ -55,7 +55,7 @@ If you are not familiar with the Visual Studio Code Snippets, and want to learn 
 
 This hands-on lab includes the following exercises:
 
-1. [New MVC 4 Project Templates](#Exercise1)
+1. [New ASP.NET MVC 4 Project Templates](#Exercise1)
 
 1. [Creating the Photo Gallery Web Application](#Exercise2)
 
@@ -69,17 +69,17 @@ This hands-on lab includes the following exercises:
 
 
 <a name="Exercise1" />
-### Exercise 1: New MVC4 Project Templates ###
+### Exercise 1: New ASP.NET MVC 4 Project Templates ###
 
-In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project templates. In addition to the Internet Application template, already present in MVC 3, this version now includes a separate template for Mobile applications. First, you will look at some relevant features of each of the templates. Then, you will work on rendering your page properly on the different platforms by using the right approach.
+In this exercise, you will explore the enhancements in the ASP.NET MVC 4 Project templates. In addition to the Internet Application template, already present in MVC 3, this version now includes a separate template for Mobile applications. First, you will look at some relevant features of each of the templates. Then, you will work on rendering your page properly on the different platforms by using the right approach.
 
 #### Task 1 - Exploring the Internet Application Template ####
 
 1. Open **Visual Studio**.
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. 
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose **ASP.NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. 
 
-	>**Note:** You will later customize the PhotoGallery MVC 4 solution you are now creating.
+	>**Note:** You will later customize the PhotoGallery ASP.NET MVC 4 solution you are now creating.
 
  	![Creating a new project](./images/Creating-a-new-project.png?raw=true "Creating a new project")
  
@@ -87,9 +87,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 1. In the **New ASP.NET MVC 4 Project** dialog, select the **Internet Application** project template and click **OK**. Make sure you have selected Razor as the view engine.
 
- 	![Creating a new MVC4 Internet Application](./images/Creating-a-new-MVC4-Internet-Application.png?raw=true "Creating a new MVC4 Internet Application")
+ 	![Creating a new ASP.NET MVC 4 Internet Application](./images/Creating-a-new-MVC4-Internet-Application.png?raw=true "Creating a new ASP.NET MVC 4 Internet Application")
  
-	_Creating a new MVC4 Internet Application_
+	_Creating a new ASP.NET MVC 4 Internet Application_
 
 	> **Note:** Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C# / VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
 
@@ -98,9 +98,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 	    The templates have been renewed, providing more modern-looking styles.
 
-	    ![MVC4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
+	    ![ASP.NET MVC 4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
  
-	    _MVC4 restyled templates_
+	    _ASP.NET MVC 4 restyled templates_
 
 	    ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
  
@@ -109,9 +109,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
     - **Adaptive Rendering**
 
 	    Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
-	    ![MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "MVC 4 project template in different browser sizes")
+	    ![ASP.NET MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "ASP.NET MVC 4 project template in different browser sizes")
  
-	    _MVC 4 project template in different browser sizes_  
+	    _ASP.NET MVC 4 project template in different browser sizes_  
 
     - **Richer UI with JavaScript**
 
@@ -180,9 +180,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 1. Now explore the solution to check out some other new features introduced by ASP.NET MVC 4 in the project template.
 
- 	![The MVC4 Internet Application Project Template](./images/The-MVC4-Internet-Application-Project-Template.png?raw=true "The MVC4 Internet Application Project Template")
+ 	![The ASP.NET MVC 4 Internet Application Project Template](./images/The-MVC4-Internet-Application-Project-Template.png?raw=true "The ASP.NET MVC 4 Internet Application Project Template")
  
-	_The MVC4 Internet Application Project Template_  
+	_The ASP.NET MVC 4 Internet Application Project Template_  
 
     - **HTML 5 Markup**
 
@@ -193,7 +193,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 	    _New template, using Razor and HTML5 markup (About.cshtml)._  
     - **Updated JavaScript libraries**
 
-	    The MVC4 default template now includes KnockoutJS, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
+	    The ASP.NET MVC 4 default template now includes KnockoutJS, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
 	    > **Note:** You can get more information about KnockOutJS library in this link: [http://learn.knockoutjs.com/](http://learn.knockoutjs.com/). Additionally, you can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).  
     - **ASP.NET Universal providers included in the solution**
@@ -210,15 +210,15 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 Project 
 
 ASP.NET MVC 4 facilitates the development of websites for mobile and tablet browsers. This template has the same application structure as the Internet Application template (notice that the controller code is practically identical), but its style was modified to render properly in touch-based mobile devices.
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose the **ASP.NET MVC4 Web Application.** Name the project **PhotoGallery.Mobile**, select a location (or leave the default), select "Add to solution" and click **OK**.
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose the **ASP.NET MVC 4 Web Application.** Name the project **PhotoGallery.Mobile**, select a location (or leave the default), select "Add to solution" and click **OK**.
 
 1. In the **New ASP.NET MVC 4 Project** dialog, select the **Mobile Application** project template and click **OK**. Make sure you have selected Razor as the view engine.
 
- 	![Creating a new MVC4 Mobile Application](./images/Creating-a-new-MVC4-Mobile-Application.png?raw=true "Creating a new MVC4 Mobile Application")
+ 	![Creating a new ASP.NET MVC 4 Mobile Application](./images/Creating-a-new-MVC4-Mobile-Application.png?raw=true "Creating a new ASP.NET MVC 4 Mobile Application")
  
-	_Creating a new MVC4 Mobile Application_
+	_Creating a new ASP.NET MVC 4 Mobile Application_
 
-1. Now you are able to explore the solution and check out some of the new features introduced by the MVC 4 solution template for mobile:  
+1. Now you are able to explore the solution and check out some of the new features introduced by the ASP.NET MVC 4 solution template for mobile:  
   - **jQuery Mobile Library**
 
 	    The Mobile Application project template includes the jQuery Mobile library, which is an open source library for mobile browser compatibility. jQuery Mobile applies progressive enhancement to mobile browsers that support CSS and JavaScript. Progressive enhancement enables all browsers to display the basic content of a web page, while it only enables the most powerful browsers to display the rich content. The JavaScript and CSS files, included in the jQuery Mobile style, help mobile browsers to fit the content in the screen without making any change in the page markup.
@@ -244,7 +244,7 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
  
 	_Project template pages in a mobile device_
 
-1. The new template also uses the **Viewport meta tag**. Most mobile browsers define a width for a virtual browser window or "viewport", which is larger than the actual width of the mobile device. This enables mobile browsers to display the entire web page inside the virtual display. The **Viewport meta tag** allows web developers to set the width, height and scale of the browser area on mobile devices**.** The MVC 4 template for Mobile Applications sets the viewport to the device width ("width=device-width") in the layout template (_Views\Shared\_Layout.cshtml_), so that all the pages will have their viewport set to the device screen width. Notice that the Viewport tag will not change the default browser view.
+1. The new template also uses the **Viewport meta tag**. Most mobile browsers define a width for a virtual browser window or "viewport", which is larger than the actual width of the mobile device. This enables mobile browsers to display the entire web page inside the virtual display. The **Viewport meta tag** allows web developers to set the width, height and scale of the browser area on mobile devices**.** The ASP.NET MVC 4 template for Mobile Applications sets the viewport to the device width ("width=device-width") in the layout template (_Views\Shared\_Layout.cshtml_), so that all the pages will have their viewport set to the device screen width. Notice that the Viewport tag will not change the default browser view.
 
 1. Open **_Layout.cshtml**, located in the **Views | Shared** folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
 
@@ -294,7 +294,7 @@ Examples of media queries:
 
 >You can find more information about this on the [W3C site](http://www.w3.org/TR/css3-mediaqueries/).
 
-You will now explore how the adaptive rendering works, improving the readability of the MVC 4 default website template.
+You will now explore how the adaptive rendering works, improving the readability of the ASP.NET MVC 4 default website template.
 
 1. Open the **PhotoGallery.sln** solution you have created at Task 1 and select the **PhotoGallery** project. Press **F5** to run the solution. 
 
@@ -342,7 +342,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 
 1. Open **Visual Studio** if not already opened.
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. Alternatively, you can continue working from your existing MVC 4 **Internet Application** solution from **Exercise 1** and skip the next step.
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C# | Web** template on the left pane tree, and choose **ASP.NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. Alternatively, you can continue working from your existing ASP.NET MVC 4 **Internet Application** solution from **Exercise 1** and skip the next step.
 
 1. In the **New ASP.NET MVC 4 Project** dialog box, select the **Internet Application** project template and click **OK**. Make sure you have Razor selected as the View Engine.
 
@@ -356,7 +356,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 
 1. Replace the **Index** method with the following **Gallery** action, and return the content from the JSON file you have recently added to the project.
 
-	(Code Snippet - _MVC4 Lab - Ex02 - Gallery Action_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - Gallery Action_)
 	<!-- mark:3-6 -->
 	````C#
 	public class PhotoController : Controller
@@ -388,7 +388,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 
 1. Add the following members to the **Photo** class.
 
-	(Code Snippet - _MVC4 Lab - Ex02 - Photo model_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - Photo model_)
 	<!-- mark:1-10 -->
 	````C#
 	public class Photo
@@ -407,7 +407,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 
 1. Add the following using statements.
 
-	(Code Snippet - _MVC4 Lab - Ex02 - HomeController Usings_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - HomeController Usings_)
 	<!-- mark:1-6 -->
 	````C#
 	using System.Net.Http;
@@ -418,7 +418,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 
 1. Update the **Index** action to use **HttpClient** to retrieve the gallery data, and then use the **JavaScriptSerializer** to deserialize it to the view model.
 
-	(Code Snippet - _MVC4 Lab - Ex02 - Index Action_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - Index Action_)
 	<!-- mark:3-9 -->
 	````C#
 	public ActionResult Index()
@@ -437,7 +437,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 
 	This code loops through all the photos retrieved from the service and displays them into an unordered list.
 
-	(Code Snippet - _MVC4 Lab - Ex02 - Photo List_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - Photo List_)
 
 	````HTML
 	@model List<PhotoGallery.Models.Photo>
@@ -475,7 +475,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 <a name="Exercise3" />
 ### Exercise 3: Adding support for mobile devices ###
 
-One of the key updates in ASP.NET MVC 4 is the support for mobile development. In this exercise, you will explore MVC4 new features for mobile applications by extending the PhotoGallery solution you have created in the previous exercise.
+One of the key updates in ASP.NET MVC 4 is the support for mobile development. In this exercise, you will explore ASP.NET MVC 4 new features for mobile applications by extending the PhotoGallery solution you have created in the previous exercise.
 
 #### Task 1 - Installing jQuery Mobile in an ASP.NET MVC 4 Application ####
 
@@ -508,7 +508,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 1. Register the Mobile bundles. To do this, open the **Global.asax.cs** file and add the following line.
 
-	(Code Snippet - _MVC4 Lab - Ex03 - Register Mobile Bundles_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex03 - Register Mobile Bundles_)
 	<!-- mark:9 -->
 	````C#
 	protected void Application_Start()
@@ -736,7 +736,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 
 1. Add the following highlighted code into the Application_Start method.
 
-	(Code Snippet - _MVC4 Lab - Ex03 - iPhone DisplayMode_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex03 - iPhone DisplayMode_)
 	<!-- mark:5-10 -->
 	````C#
 	protected void Application_Start()
@@ -833,7 +833,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 1. Replace the **client.GetAsync()** call with the full async version using await keyword as shown below.
 
-	(Code Snippet - _MVC4 Lab - Ex04 - GetAsync_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - GetAsync_)
 
 	````C#
 	public async Task<ActionResult> Index()
@@ -849,7 +849,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 1. Change the code to continue with the asynchronous implementation by replacing the lines with the new code as shown below
 
-	(Code Snippet - _MVC4 Lab - Ex04 - ReadAsStringAsync_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - ReadAsStringAsync_)
 	<!-- mark:5-6 -->
 	````C#
     public async Task<ActionResult> Index()
@@ -892,7 +892,7 @@ Asynchronous action methods that return Task instances can also support time-out
 
 1. Update the **GetAsync** call to pass the cancellation token.
 
-	(Code Snippet - _MVC4 Lab - Ex04 - SendAsync with CancellationToken_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - SendAsync with CancellationToken_)
 	<!-- mark:4 -->
 	````C#
     public async Task<ActionResult> Index(CancellationToken cancellationToken)
@@ -908,7 +908,7 @@ Asynchronous action methods that return Task instances can also support time-out
 
 1. Decorate the _Index_ method with an **AsyncTimeout** attribute set to 500 milliseconds and a **HandleError** attribute configured to handle **TaskCanceledException** by redirecting to a **TimedOut** view.
 
-	(Code Snippet - _MVC4 Lab - Ex04 - Attributes_)
+	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - Attributes_)
 
 	````C#
 	[AsyncTimeout(500)]
