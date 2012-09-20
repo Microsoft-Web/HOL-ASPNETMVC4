@@ -96,33 +96,32 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 Project
 1. Press **F5** to run the solution and see the renewed templates. You can check out the following features:
     - **Modern-style templates**
 
-	    The templates have been renewed, providing more modern-looking styles.
+        The templates have been renewed, providing more modern-looking styles.
 
-	    ![ASP.NET MVC 4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
- 
-	    _ASP.NET MVC 4 restyled templates_
+        ![ASP.NET MVC 4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
 
-	    ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
- 
-	    _New Contact page_
+        _ASP.NET MVC 4 restyled templates_
+
+        ![New Contact page](./images/New-Contact-page.png?raw=true "New Contact page")
+
+        _New Contact page_
 
     - **Adaptive Rendering**
 
-	    Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
-	    ![ASP.NET MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "ASP.NET MVC 4 project template in different browser sizes")
- 
-	    _ASP.NET MVC 4 project template in different browser sizes_  
+        Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
+        ![ASP.NET MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "ASP.NET MVC 4 project template in different browser sizes")
+
+        _ASP.NET MVC 4 project template in different browser sizes_  
 
     - **Richer UI with JavaScript**
 
-	    Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery Validations to validate the input fields from client-side.
+        Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery Validations to validate the input fields from client-side.
 
-	    ![jQuery Validation](images/jquery-validation.png?raw=true)
+        ![jQuery Validation](images/jquery-validation.png?raw=true)
 
-		 _jQuery Validation_
+        _jQuery Validation_
 
-		> **Note:** Notice the two log in sections, in the first section you can log in using a registerd account from the site and in the second section you can altenativelly log in using another authentication service like google (disabled by default).
-
+        > **Note:** Notice the two log in sections, in the first section you can log in using a registerd account from the site and in the second section you can altenativelly log in using another authentication service like google (disabled by default).
 
 1. Close the browser to stop the debugger and return to Visual Studio.
 
