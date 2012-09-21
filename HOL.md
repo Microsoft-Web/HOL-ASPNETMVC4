@@ -109,6 +109,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 Project
     - **Adaptive Rendering**
 
         Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization.
+
         ![ASP.NET MVC 4 project template in different browser sizes](./images/MVC-4-project-template-in-different-browser-sizes.png?raw=true "ASP.NET MVC 4 project template in different browser sizes")
 
         _ASP.NET MVC 4 project template in different browser sizes_  
@@ -721,7 +722,7 @@ In this task, you will update the desktop layout to include the view-switcher. T
 
 The new display modes feature lets an application select views depending on the browser that is generating the request. For example, if a desktop browser requests the Home page, the application will return the **Views\Home\Index.cshtml** template. Then, if a mobile browser requests the Home page, the application will return the **Views\Home\Index.mobile.cshtml** template.
 
-In this task, you will create a customized layout for iPhone devices, and you will have to simulate requests from iPhone devices. To do this, you can use either an iPhone emulator/simulator (like [Electric Mobile Simulator](http://www.electricplum.com/dlsim.html)) or a browser with add-ons that modify the user agent. For instructions on how to set the user agent string in an Safari browser to emulate an iPhone, see [How to let Safari pretend it's IE](http://www.davidalison.com/2008/05/how-to-let-safari-pretend-its-ie.html) in David Alison's blog.
+In this task, you will create a customized layout for iPhone devices, and you will have to simulate requests from iPhone devices. To do this, you can use either an iPhone emulator/simulator (like [Electric Mobile Simulator](http://www.electricplum.com/)) or a browser with add-ons that modify the user agent. For instructions on how to set the user agent string in an Safari browser to emulate an iPhone, see [How to let Safari pretend it's IE](http://www.davidalison.com/2008/05/how-to-let-safari-pretend-its-ie.html) in David Alison's blog.
 
 **Notice that this task is optional and you can continue throughout the lab without executing it.**
 
@@ -780,7 +781,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 
 1. Press **F5** to run the application and browse the site in the **Windows Phone Emulator**.
 
-1. Open an **iPhone simulator**, as the [Electric Mobile Simulator](http://www.electricplum.com/dlsim.html), and browse to the site too. Notice that each phone is using the specific template.
+1. Open an **iPhone simulator** (see [Appendix C](#AppendixC) for instructions on how to install and configure an iPhone simulator), and browse to the site too. Notice that each phone is using the specific template.
 
 	![Using-different-views-for-each-mobile-device2](images/Using-different-views-for-each-mobile-device2.png?raw=true)
  
