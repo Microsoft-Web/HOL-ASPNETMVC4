@@ -1,20 +1,14 @@
 @echo off
 echo.
 echo ======================================================
-echo Uninstall Visual Studio 11 Code Snippets for the lab
+echo Uninstall Visual Studio Code Snippets for the lab
 echo ======================================================
 echo.
 
-SET Preffix=MVC4LabEx
+for /f "tokens=2,*" %%a in ('reg query "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" /v "Personal" 2^>NUL ^| findstr Personal') do set MyDocuments=%%b
 
-DEL /Q /F "%USERPROFILE%\Documents\Visual Studio 11\Code Snippets\Visual C#\My Code Snippets\%Preffix%*.snippet" 2>NUL
-DEL /Q /F "%USERPROFILE%\Documents\Visual Studio 11\Code Snippets\Visual Basic\My Code Snippets\%Preffix%*.snippet" 2>NUL
-DEL /Q /F "%USERPROFILE%\Documents\Visual Studio 11\Code Snippets\XML\My Xml Snippets\%Preffix%*.snippet" 2>NUL
-DEL /Q /F "%USERPROFILE%\Documents\Visual Studio 11\Code Snippets\Visual Web Developer\My HTML Snippets\%Preffix%*.snippet" 2>NUL
-DEL /Q /F "%USERPROFILE%\Documents\Visual Studio 11\Code Snippets\SQL\My Code Snippets\%Preffix%*.snippet" 2>NUL
-DEL /Q /F "%USERPROFILE%\Documents\Visual Studio 11\Code Snippets\Visual C++\My Code Snippets\%Preffix%*.snippet" 2>NUL
-DEL /Q /F "%USERPROFILE%\Documents\Visual Studio 11\Code Snippets\JavaScript\My Code Snippets\%Preffix%*.snippet" 2>NUL
+DEL "%MyDocuments%\Visual Studio 2012\Code Snippets\Visual C#\My Code Snippets\ASPNETMVC4LabEx*.snippet" 2>NUL
+DEL "%MyDocuments%\Visual Studio 2012\Code Snippets\XML\My Xml Snippets\ASPNETMVC4LabEx*.snippet" 2>NUL
 
-echo Lab Code snippets have been removed!
-echo.
-pause
+echo Lab Code Snippets have been removed!
+PAUSE

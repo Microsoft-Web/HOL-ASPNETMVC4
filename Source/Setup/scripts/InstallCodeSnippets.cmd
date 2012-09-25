@@ -17,3 +17,4 @@ set powerShellDir=%WINDIR%\system32\windowspowershell\v1.0
 call %powerShellDir%\powershell.exe -Command Set-ExecutionPolicy unrestricted
 
 call %powerShellDir%\powershell.exe -Command "&'.\installCodeSnippets.ps1' '%~dp0snippets\MVC4Lab.vsi'"
+
