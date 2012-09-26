@@ -197,16 +197,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 Project
 	    The ASP.NET MVC 4 default template now includes KnockoutJS, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
 	    > **Note:** You can get more information about KnockOutJS library in this link: [http://learn.knockoutjs.com/](http://learn.knockoutjs.com/). Additionally, you can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).  
-    - **ASP.NET Universal providers included in the solution**
 
-	    ASP.NET Universal Providers extend Session, Membership, Roles and Profile support to SQL Compact Edition and SQL Azure. By only configuring the right connection string, your application will be able to work with SQL Server (plus Express), SQL Server Compact or SQL Azure.
-
-	    > **Note:** ASP.NET Universal Providers Library is also available for MVC3 projects in the NuGet public feed. You can learn more about SQL Azure in this link: [http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_sqlazure_unit](http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_sqlazure_unit).
-
-	    ![ASP.NET-Universal-Providers-reference-is-now-included](images/ASP.NET-Universal-Providers-reference-is-now-included.png?raw=true)
-
-	    _ASP.NET Universal Providers reference is now included_
- 
 #### Task 2 - Exploring the Mobile Application Template ####
 
 ASP.NET MVC 4 facilitates the development of websites for mobile and tablet browsers. This template has the same application structure as the Internet Application template (notice that the controller code is practically identical), but its style was modified to render properly in touch-based mobile devices.
