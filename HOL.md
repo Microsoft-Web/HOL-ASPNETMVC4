@@ -475,6 +475,12 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 1. Open the **MVC4Lab-Ex3-Begin.sln** solution located in **Source\Ex3-MobileSupport\Begin** from this lab's folder. Alternatively, you can continue working on your existing solution from the previous exercise.
 
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+
+	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+
+	1. Finally, build the solution by clicking **Build** | **Build Solution**.
+
 1. Open the **Package Manager Console** by clicking the **Tools** > **Library Package Manager** > **Package Manager Console** menu option.
 
  	![Opening the NuGet Package Manager Console](./images/Opening-the-NuGet-Package-Manager-Console.png?raw=true "Opening the NuGet Package Manager Console")
@@ -793,6 +799,12 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 1. Open **Visual Studio** if not already opened.
 
 1. Open the **MVC4Lab-Ex4-Begin.sln** solution located in **Source\Ex4-Async\Begin** from this lab's folder. Alternatively, you can continue working on your existing solution from the previous exercise.
+
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+
+	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+
+	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. If you opened the **MVC4Lab-Ex4-Begin.sln** solution, right-click the solution and select **Enable NuGet Package Restore**
 
