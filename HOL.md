@@ -236,9 +236,9 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
  
 	_Project template pages in a mobile device_
 
-1. The new template also uses the **Viewport meta tag**. Most mobile browsers define a width for a virtual browser window or "viewport", which is larger than the actual width of the mobile device. This enables mobile browsers to display the entire web page inside the virtual display. The **Viewport meta tag** allows web developers to set the width, height and scale of the browser area on mobile devices**.** The ASP.NET MVC 4 template for Mobile Applications sets the viewport to the device width ("width=device-width") in the layout template (_Views\Shared\_Layout.cshtml_), so that all the pages will have their viewport set to the device screen width. Notice that the Viewport tag will not change the default browser view.
+1. The new template also uses the **Viewport meta tag**. Most mobile browsers define a width for a virtual browser window or "viewport", which is larger than the actual width of the mobile device. This enables mobile browsers to display the entire web page inside the virtual display. The **Viewport meta tag** allows web developers to set the width, height and scale of the browser area on mobile devices**.** The ASP.NET MVC 4 template for Mobile Applications sets the viewport to the device width ("width=device-width") in the layout template (_Views\Shared\_Layout.cshtml_), so that all the pages will have their viewport set to the device screen width. Notice that the Viewport meta tag will not change the default browser view.
 
-1. Open **_Layout.cshtml**, located in the **Views | Shared** folder, and comment the Viewport tag. Run the application, if not already opened, and check out the differences. 
+1. Open **_Layout.cshtml**, located in the **Views | Shared** folder, and comment the Viewport meta tag. Run the application, if not already opened, and check out the differences. 
 
 	````HTML
 	...
@@ -254,7 +254,7 @@ ASP.NET MVC 4 facilitates the development of websites for mobile and tablet brow
 
 1. In Visual Studio, press **SHIFT** + **F5** to stop debugging the application.
 
-1. Uncomment the viewport tag.
+1. Uncomment the viewport meta tag.
 
 	````HTML
 	...
@@ -349,6 +349,7 @@ In this task, you will create a mock of the photo service to retrieve the conten
 1. Replace the **Index** method with the following **Gallery** action, and return the content from the JSON file you have recently added to the project.
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - Gallery Action_)
+
 	<!-- mark:3-6 -->
 	````C#
 	public class PhotoController : Controller
@@ -381,6 +382,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 1. Add the following members to the **Photo** class.
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - Photo model_)
+
 	<!-- mark:1-10 -->
 	````C#
 	public class Photo
@@ -400,7 +402,8 @@ In this task, you will update the Home page to show the photo gallery by using t
 1. Add the following using statements.
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - HomeController Usings_)
-	<!-- mark:1-6 -->
+
+	<!-- mark:1-4 -->
 	````C#
 	using System.Net.Http;
 	using System.Web.Script.Serialization;
@@ -411,6 +414,7 @@ In this task, you will update the Home page to show the photo gallery by using t
 1. Update the **Index** action to use **HttpClient** to retrieve the gallery data, and then use the **JavaScriptSerializer** to deserialize it to the view model.
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex02 - Index Action_)
+
 	<!-- mark:3-9 -->
 	````C#
 	public ActionResult Index()
@@ -507,6 +511,7 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 1. Register the Mobile bundles. To do this, open the **Global.asax.cs** file and add the following line.
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex03 - Register Mobile Bundles_)
+
 	<!-- mark:9 -->
 	````C#
 	protected void Application_Start()
@@ -735,6 +740,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 1. Add the following highlighted code into the Application_Start method.
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex03 - iPhone DisplayMode_)
+
 	<!-- mark:5-10 -->
 	````C#
 	protected void Application_Start()
@@ -752,7 +758,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 
 	You have registered a new **DefaultDisplayMode named "iPhone"**, within the static **DisplayModeProvider.Instance.Modes** static list, that will be matched against each incoming request.  If the incoming request contains the string "iPhone", ASP.NET MVC will find the views whose name contain the "iPhone" suffix. The 0 parameter indicates how specific is the new mode; for instance, this view is more specific than the general ".mobile" rule that matches requests from mobile devices.
 
-	After this code runs, when an iPhone browser generates a request, your application will use the **Views\Shared\_Layout.iPhone.cshtml** layout you will create in the next steps.
+	After this code runs, when an iPhone browser generates a request, your application will use the **Views\Shared\\_Layout.iPhone.cshtml** layout you will create in the next steps.
 
 	>**Note:** This way of testing the request for iPhone has been simplified for demo purposes and might not work as expected for every iPhone user agent string (for example test is case sensitive).
 
@@ -792,7 +798,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
  Microsoft .NET Framework 4.5 introduces new language features in C# and Visual Basic to provide a new foundation for asynchrony in .NET programming. This new foundation makes asynchronous programming similar to - and about as straightforward as - synchronous programming.
 You are now able to write asynchronous action methods in ASP.NET MVC 4 by using the **AsyncController** class. You can use asynchronous action methods for long-running, non-CPU bound requests. This avoids blocking the Web server from performing work while the request is being processed. The AsyncController class is typically used for long-running Web service calls.
 
-This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If you want a deeper dive, you can check out the following article: [http://msdn.microsoft.com/en-us/library/ee728598.aspx](http://msdn.microsoft.com/en-us/library/ee728598.aspx)
+This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If you want a deeper dive, you can check out the following article: [http://msdn.microsoft.com/en-us/library/ee728598%28v=vs.100%29.aspx](http://msdn.microsoft.com/en-us/library/ee728598%28v=vs.100%29.aspx)
 
 #### Task 1 - Implementing an Asynchronous Controller ####
 
@@ -805,10 +811,6 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
 
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
-
-1. If you opened the **MVC4Lab-Ex4-Begin.sln** solution, right-click the solution and select **Enable NuGet Package Restore**
-
-	> **Note:** For more information see the following article http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages
 
 1. Open the **HomeController.cs** class from the **Controllers** folder.
 
@@ -839,6 +841,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - GetAsync_)
 
+	<!-- mark:4 -->
 	````C#
 	public async Task<ActionResult> Index()
 	{
@@ -854,6 +857,7 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 1. Change the code to continue with the asynchronous implementation by replacing the lines with the new code as shown below
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - ReadAsStringAsync_)
+
 	<!-- mark:5-6 -->
 	````C#
     public async Task<ActionResult> Index()
@@ -897,6 +901,7 @@ Asynchronous action methods that return Task instances can also support time-out
 1. Update the **GetAsync** call to pass the cancellation token.
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - SendAsync with CancellationToken_)
+
 	<!-- mark:4 -->
 	````C#
     public async Task<ActionResult> Index(CancellationToken cancellationToken)
@@ -914,6 +919,7 @@ Asynchronous action methods that return Task instances can also support time-out
 
 	(Code Snippet - _ASP.NET MVC 4 Lab - Ex04 - Attributes_)
 
+	<!-- mark:1-2 -->
 	````C#
 	[AsyncTimeout(500)]
 	[HandleError(ExceptionType = typeof(TimeoutException), View = "TimedOut")]
@@ -933,8 +939,9 @@ Asynchronous action methods that return Task instances can also support time-out
 	}
 	````
 
-1. Open the **Web.config** file and enable custom errors by editing the following property.
+1. Open the **Web.config** file and enable custom errors by adding the following element.
 
+	<!-- mark:2 -->
 	````XML
 	<system.web>
 	  <customErrors mode="On"></customErrors>
