@@ -1,5 +1,9 @@
-﻿#What's New in ASP.NET MVC 4#
+﻿<a name="HOLTop" />
 
+# What's New in ASP.NET MVC 4 #
+---
+
+<a name="Overview" />
 ## Overview ##
 
 ASP.NET MVC 4 is a framework for building scalable, standards-based web applications using well-established design patterns and the power of the ASP.NET and the .NET framework. This new, fourth version of the framework focuses on making mobile web application development easier.
@@ -28,6 +32,8 @@ In this hands-on lab, you will learn how to:
 <a name="Prerequisites" />
 ### Prerequisites ###
 
+You must have the following items to complete this lab:
+
 - [Microsoft Visual Studio Express 2012 for Web](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) or superior (read [Appendix B](#AppendixB) for instructions on how to install it).
 
 - [ASP.NET MVC 4](http://www.asp.net/mvc/mvc4) (included in the Microsoft Visual Studio 2012 installation)
@@ -48,7 +54,7 @@ To install the code snippets:
 1. Double-click the **Setup.cmd** file in this folder to install the Visual Studio code snippets.
 
  
-If you are not familiar with the Visual Studio Code Snippets, and want to learn how to use them, you can refer to the appendix from this document "[Appendix: Using Code Snippets](#AppendixA)".
+If you are not familiar with the Visual Studio Code Snippets, and want to learn how to use them, you can refer to the appendix from this document "[Appendix A: Using Code Snippets](#AppendixA)".
 
 <a name="Exercises" />
 ## Exercises ##
@@ -63,10 +69,9 @@ This hands-on lab includes the following exercises:
 
 1. [Using Asynchronous Controllers](#Exercise4)
 
-> **Note:** Each exercise is accompanied by a starting solution-located in the **Begin** folder of the exercise-that allows you to follow each exercise independently of the others. Please be aware that the code snippets that are added during an exercise are missing from these starting solutions and that they will not necessarily work until you complete the exercise.
+> **Note:** Each exercise is accompanied by an **End** folder containing the resulting solution you should obtain after completing the exercises. You can use this solution as a guide if you need additional help working through the exercises.
 
-> Inside the source code for an exercise, you will also find an **End** folder containing a Visual Studio solution with the resulting code from completing the steps in the corresponding exercise. You can use these solutions as guidance if you need additional help as you work through this hands-on lab.
-
+Estimated time to complete this lab: **60 minutes**.
 
 <a name="Exercise1" />
 ### Exercise 1: New ASP.NET MVC 4 Project Templates ###
@@ -99,7 +104,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 Project
 
  	The templates have been renewed, providing more modern-looking styles.
 
- 	![ASP.NET MVC 4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC4 restyled templates")
+ 	![ASP.NET MVC 4 restyled templates](./images/MVC4-restyled-templates.png?raw=true "MVC 4 restyled templates")
 
  	_ASP.NET MVC 4 restyled templates_
 
@@ -475,15 +480,15 @@ One of the key updates in ASP.NET MVC 4 is the support for mobile development. I
 
 #### Task 1 - Installing jQuery Mobile in an ASP.NET MVC 4 Application ####
 
-1. Open **Visual Studio** if not already opened.
+1. Open the **Begin** solution located at **Source/Ex3-MobileSupport/Begin/** folder. Otherwise, you might continue using the **End** solution obtained by completing the previous exercise.
 
-1. Open the **MVC4Lab-Ex3-Begin.sln** solution located in **Source\Ex3-MobileSupport\Begin** from this lab's folder. Alternatively, you can continue working on your existing solution from the previous exercise.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click the **Project** menu and select **Manage NuGet Packages**.
 
-	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, in the Solution Explorer, click the **PhotoGallery** project and select **Manage NuGet Packages**.
-
-	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
 
 1. Open the **Package Manager Console** by clicking the **Tools** > **Library Package Manager** > **Package Manager Console** menu option.
 
@@ -802,15 +807,15 @@ This exercise explains the basics of asynchronous operation in ASP.NET MVC 4. If
 
 #### Task 1 - Implementing an Asynchronous Controller ####
 
-1. Open **Visual Studio** if not already opened.
+1. Open the **Begin** solution located at **Source/Ex4-Async/Begin/** folder. Otherwise, you might continue using the **End** solution obtained by completing the previous exercise.
 
-1. Open the **MVC4Lab-Ex4-Begin.sln** solution located in **Source\Ex4-Async\Begin** from this lab's folder. Alternatively, you can continue working on your existing solution from the previous exercise.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click the **Project** menu and select **Manage NuGet Packages**.
 
-	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, in the Solution Explorer, click the **PhotoGallery** project and select **Manage NuGet Packages**.
-
-	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
 
 1. Open the **HomeController.cs** class from the **Controllers** folder.
 
@@ -970,6 +975,8 @@ Asynchronous action methods that return Task instances can also support time-out
  	![Time-out exception handled](./images/Time-out-exception-handled.png?raw=true "Time-out exception handled")
  
  	_Time-out exception handled_
+
+>**Note:** Additionally, you can deploy this application to Windows Azure Web Sites following [Appendix D: Publishing an ASP.NET MVC 4 Application using Web Deploy](#AppendixD).
 
 <a name="Summary" />
 ## Summary ##

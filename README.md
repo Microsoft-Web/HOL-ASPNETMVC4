@@ -4,7 +4,9 @@
 
 ### Introduction ###
 
-This Hands-On Lab is a step-by-step guide that is designed to help you learn ASP.NET MVC 4. It provides instructions to guide you through the process of developing a complete application using ASP.NET MVC 4.
+These Hands-On Labs are sets of step-by-step guides that are designed to help you learn Visual Studio 2012, ASP.NET 4.5 WebForms and ASP.NET MVC 4. Each Lab provides instructions to guide you through the process of developing a Web application.
+
+In this hands-on lab, you will start with the ASP.NET MVC 4 "Internet Application" project template to create a Photo Gallery application. You will progressively enhance the app using jQuery Mobile and ASP.NET MVC 4's new features to make it compatible with different mobile devices and desktop web browsers. You will also learn about new code recipes for code generation and how ASP.NET MVC 4 makes it easier for you to write asynchronous action methods by supporting ActionResult return types.
 
 ### Repository Structure ###
 
