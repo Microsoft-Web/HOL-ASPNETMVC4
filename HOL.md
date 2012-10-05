@@ -584,7 +584,7 @@ In this task, you will create a mobile version of the index view with content ad
  
 	_Gallery using listview style with filtering_
 
-	To summarize, you have used the View Mobilizer recipe to create a copy of the Index view with the "mobile" suffix. This suffix indicates to MVC that every request generated from a mobile device will use this copy of the index. Additionally, you have updated the mobile version of the Index view to use jQuery Mobile for enhancing the site look and feel in mobile devices.
+	To summarize, you have used the View Mobilizer recipe to create a copy of the Index view with the "mobile" suffix. This suffix indicates to ASP.NET MVC 4 that every request generated from a mobile device will use this copy of the index. Additionally, you have updated the mobile version of the Index view to use jQuery Mobile for enhancing the site look and feel in mobile devices.
 
 1. Go back to Visual Studio and open **Site.Mobile.css** located under the **Content** folder.
 
@@ -780,7 +780,7 @@ In this task, you will create a customized layout for iPhone devices, and you wi
 	...
 	````
 
-	Now you have 3 layouts in your MVC application:
+	Now you have 3 layouts in your ASP.NET MVC 4 application:
 
 	<ol type="a">
 	<li><b>_Layout.cshtml</b>: default layout used for desktop browsers.</li>
