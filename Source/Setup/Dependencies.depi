@@ -16,12 +16,5 @@
 		disableSkip="false"
 		type="Registry" />
 
-	<dependency
-		 hint="Microsoft Visual Studio (?:Ultimate 2012|Premium 2012|Professional 2012|Express 2012 for Web).*;11.0"
-		 name="Microsoft Visual Studio 2012"
-		 description="Microsoft Visual Studio 2012 Express for Web or superior"
-		 helpLink="http://go.microsoft.com/?linkid=9810169"
-		 type="Uninstall" />
-	
   </dependencies>
 </DependencyCheckerConfiguration>
